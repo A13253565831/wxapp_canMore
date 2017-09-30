@@ -1,0 +1,64 @@
+
+<!--地址管理-->
+<view wx:if="{{ default_add != null }}" >
+<view class="radio-group">
+<view hidden="{{hiddenAddress}}" class="address" >
+  <view class="address-icon">
+    <radio checked="{{default_add.id==default_id?true:false}}" value="{{index}}" />
+  </view>
+  
+  <view class="address-detail">
+    <view class="address-name-phone">
+      <text class="address-name">{{default_add.re_name}}</text>
+      <text class="address-phone">电话:{{default_add.phone}}</text>
+    </view>
+    <view class="address-info">{{default_add.province}} {{default_add.city}} {{default_add.area}} {{default_add.address}}</view>
+    <view class="address-edit">
+      <view>
+        <icon></icon>
+        <text ></text>
+      </view>
+      <view>
+        <text data-id="{{default_add.id}}" bindtap="delAddress">删除</text>
+      </view>
+    </view>
+  </view>
+</view>
+</view>
+</view>
+
+
+
+
+<radio-group class="radio-group" wx:for="{{address}}" wx:if="{{address != null && address!='undefined'}}">
+<view hidden="{{hiddenAddress}}" class="address" >
+  <view class="address-icon" bindtap="setDefault" data-id="{{item.id}}">
+    <radio checked="{{item.id==default_id?true:false}}" value="{{index}}" />
+  </view>
+  
+  <view class="address-detail">
+    <view class="address-name-phone">
+      <text class="address-name">{{item.re_name}}</text>
+      <text class="address-phone">电话:{{item.phone}}</text>
+    </view>
+    <view class="address-info">{{item.province}} {{item.city}} {{item.area}} {{item.address}}</view>
+    <view class="address-edit">
+      <view>
+        <icon></icon>
+        <text></text>
+      </view>
+      <view>
+        <text bindtap="setDefault" data-id="{{item.id}}">设置默认</text>
+        <text > | </text>
+        <text data-id="{{item.id}}" bindtap="delAddress">删除</text>
+      </view>
+    </view>
+  </view>
+</view>
+</radio-group>
+<navigator url="../address?id= {{id}}">
+  <view hidden="{{hiddenAddress}}" class="add-address">
+    <image class="add-address-icon" src="#"></image>
+    <view>新增地址</view>
+  </view>
+</navigator>

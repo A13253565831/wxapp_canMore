@@ -1,0 +1,100 @@
+<block wx:if="{{glo_is_load}}">
+    <view class="glo_load_view">
+        <text class="iconfont icon-loading animated infinite rotate mr5"></text><text>正在努力加载</text>
+    </view>
+</block>
+<block wx:else>
+<view class="p-main flex flexC">
+  <view class="p-top sub">
+    <scroll-view scroll-y="true" class="p-scroll">
+      <block wx:for="{{goods}}">
+
+      <view class="p-img">
+        <image src="{{item.image}}" mode="aspectFill" class="p-img-item"></image>
+      </view>
+      <view class="p-info">
+
+        <view class="f18">{{item.name}}</view>
+        <view class="grey mt5">已售{{item.is_order}}</view>
+        <view class="red f20 mt5">
+          ￥{{item.price}}
+        </view>
+
+
+      </view>
+
+      <view class="p-detail gridXt">
+      
+        <view class="p-item-tit f16 grey">
+          <text class="iconfont icon-text"></text>   商品详情
+        </view>
+
+        <view class="p-text">
+            <text>
+            {{item.des}}
+            </text>
+        </view>
+
+      </view>
+
+
+      </block>
+    </scroll-view>
+  </view>
+
+  <!--商品评价体系-->
+
+  <view class='pj'>
+
+    <view class="pingjia_nav" >
+      <text>菜品评价({{count}})</text>
+    </view>
+
+    <view class="pingjia_chose">
+     <view class="pj_v">
+      <button class='btn' catchtap="bindbtn" data-id="{{id[0]}}">很满意 ( {{level.count_level_1}} )</button>
+     </view>
+     <view class="pj_v">
+      <button class='btn' catchtap="bindbtn" data-id="{{id[1]}}">满意 ( {{ level.count_level_2 }} )</button>
+     </view>
+     <view class="pj_v">
+      <button class='btn' catchtap="bindbtn" data-id="{{id[2]}}">一般 ( {{level.count_level_3 }} )</button>
+     </view>
+     <view class="pj_v">
+      <button class='btn' catchtap="bindbtn" data-id="{{id[3]}}">不满意 ( {{ level.count_level_4 }} )</button>
+     </view>
+     
+    </view>
+
+    <view class="pj_person">
+     <view class="pj_box">
+      <view class="pj_person_name">
+       <image src="{{pingjia[0].fans_img}}"></image> 
+       <text> {{pingjia[0].fans_name}} </text>
+       <text class="text"> {{pingjia[0].level}} </text>
+      </view>
+      <!--<view class="pj_cai_img">
+      <text>菜品  </text>
+      <image src=" {{pingjia[0].img}}"></image>
+       
+      </view>-->
+      <view class="pj_cont">
+        <text>{{pingjia[0].info}}</text>         
+      </view>
+      <view class="pj_time">
+      <text>{{pingjia[0].createtime}}</text>
+      </view>
+
+      <view class="total_pj"><button class="total_btn" catchtap="bindbtn">全部评价</button></view>
+     </view>
+
+    </view>
+  
+ </view>
+
+
+
+
+
+</view>
+</block>

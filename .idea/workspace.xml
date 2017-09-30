@@ -1,0 +1,656 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="77bad8a1-78e1-4dbd-91cd-f52cd5515139" name="Default" comment="" />
+    <ignored path="$PROJECT_DIR$/.tmp/" />
+    <ignored path="$PROJECT_DIR$/temp/" />
+    <ignored path="$PROJECT_DIR$/tmp/" />
+    <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
+    <option name="TRACKING_ENABLED" value="true" />
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileEditorManager">
+    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
+      <file leaf-file-name="index.js" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/pages/restaurant/pay/index.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="0">
+              <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="info.js" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/pages/restaurant/restaurant-order-info/info.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="240">
+              <caret line="10" column="37" lean-forward="true" selection-start-line="10" selection-start-column="37" selection-end-line="10" selection-end-column="37" />
+              <folding>
+                <marker date="1504857075180" expanded="true" signature="536:1140" ph="{...}" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="index.js" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/pages/restaurant/restaurant-order-list/index.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="6288">
+              <caret line="262" column="36" lean-forward="false" selection-start-line="262" selection-start-column="25" selection-end-line="262" selection-end-column="36" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="index.wxml" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/pages/restaurant/restaurant-order-list/index.wxml">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="546">
+              <caret line="153" column="7" lean-forward="false" selection-start-line="153" selection-start-column="7" selection-end-line="153" selection-end-column="7" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="index.js" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/pages/restaurant/restaurant-single/index.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="0">
+              <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="index.wxss" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/pages/restaurant/restaurant-home/index.wxss">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="0">
+              <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="index.wxml" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/pages/restaurant/restaurant-home/index.wxml">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="2256">
+              <caret line="94" column="4" lean-forward="false" selection-start-line="94" selection-start-column="4" selection-end-line="94" selection-end-column="4" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="index.js" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/pages/restaurant/restaurant-home/index.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="3888">
+              <caret line="162" column="28" lean-forward="false" selection-start-line="162" selection-start-column="28" selection-end-line="162" selection-end-column="28" />
+              <folding>
+                <marker date="1505613544815" expanded="true" signature="240:4878" ph="{...}" />
+                <marker date="1505613544815" expanded="true" signature="695:1757" ph="{...}" />
+                <marker date="1505613544815" expanded="true" signature="773:1615" ph="{...}" />
+                <marker date="1505613544815" expanded="true" signature="835:1441" ph="{...}" />
+                <marker date="1505613544815" expanded="true" signature="1344:1422" ph="{...}" />
+                <marker date="1505613544815" expanded="true" signature="1447:1609" ph="{...}" />
+                <marker date="1505613544815" expanded="true" signature="1457:1601" ph="//..." />
+                <marker date="1505613544815" expanded="true" signature="1621:1753" ph="{...}" />
+                <marker date="1505613544815" expanded="true" signature="1642:1731" ph="{&quot;title&quot;: '提示'...}" />
+                <marker date="1505613544815" expanded="true" signature="1799:2128" ph="{...}" />
+                <marker date="1505613544815" expanded="true" signature="1876:1988" ph="{...}" />
+                <marker date="1505613544815" expanded="true" signature="1898:1980" ph="{...}" />
+                <marker date="1505613544815" expanded="true" signature="1994:2124" ph="{...}" />
+                <marker date="1505613544815" expanded="true" signature="2015:2102" ph="{&quot;title&quot;: '提示'...}" />
+                <marker date="1505613544815" expanded="true" signature="2170:2516" ph="{...}" />
+                <marker date="1505613544815" expanded="true" signature="2247:2376" ph="{...}" />
+                <marker date="1505613544815" expanded="true" signature="2269:2368" ph="{...}" />
+                <marker date="1505613544815" expanded="true" signature="2382:2512" ph="{...}" />
+                <marker date="1505613544815" expanded="true" signature="2403:2490" ph="{&quot;title&quot;: '提示'...}" />
+                <marker date="1505613544815" expanded="true" signature="2557:2646" ph="{...}" />
+                <marker date="1505613544815" expanded="true" signature="2577:2640" ph="{...}" />
+                <marker date="1505613544815" expanded="true" signature="2681:3147" ph="{...}" />
+                <marker date="1505613544815" expanded="true" signature="2700:2792" ph="{&quot;title&quot;: '地图加载中'...}" />
+                <marker date="1505613544815" expanded="true" signature="2944:3141" ph="{&quot;name&quot;: that.data.this_dish_info.dish_name...}" />
+                <marker date="1505613544815" expanded="true" signature="3187:3304" ph="{...}" />
+                <marker date="1505613544815" expanded="true" signature="3231:3298" ph="{&quot;phoneNumber&quot;: that.data.this_dish_info.dish_con_mobile...}" />
+                <marker date="1505613544815" expanded="true" signature="3333:3447" ph="{...}" />
+                <marker date="1505613544815" expanded="true" signature="3373:3408" ph="{&quot;this_options&quot;: options...}" />
+                <marker date="1505613544815" expanded="true" signature="3480:3941" ph="{...}" />
+                <marker date="1505613544815" expanded="true" signature="3518:3936" ph="{&quot;url&quot;: con.getcompanylist...}" />
+                <marker date="1505613544815" expanded="true" signature="3584:3622" ph="{&quot;wxappid&quot;: con.wxappid...}" />
+                <marker date="1505613544815" expanded="true" signature="3638:3690" ph="{&quot;Content-Type&quot;: &quot;application/json&quot;...}" />
+                <marker date="1505613544815" expanded="true" signature="3719:3930" ph="{...}" />
+                <marker date="1505613544815" expanded="true" signature="3756:3922" ph="{...}" />
+                <marker date="1505613544815" expanded="true" signature="3822:3911" ph="{...}" />
+                <marker date="1505613544815" expanded="true" signature="3977:4147" ph="{...}" />
+                <marker date="1505613544815" expanded="true" signature="4151:4331" ph="//..." />
+                <marker date="1505613544815" expanded="true" signature="4364:4615" ph="{...}" />
+                <marker date="1505613544815" expanded="true" signature="4474:4524" ph="{&quot;previewImage&quot;: that.data.previewImage...}" />
+                <marker date="1505613544815" expanded="true" signature="4659:4872" ph="{...}" />
+                <marker date="1505613544815" expanded="true" signature="4815:4826" ph="{...}" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="user.js" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/pages/user/user_index/user.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="1176">
+              <caret line="49" column="6" lean-forward="false" selection-start-line="49" selection-start-column="6" selection-end-line="49" selection-end-column="6" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="user.wxml" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/pages/user/user_index/user.wxml">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="550">
+              <caret line="55" column="6" lean-forward="false" selection-start-line="55" selection-start-column="6" selection-end-line="55" selection-end-column="6" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+    </leaf>
+  </component>
+  <component name="FindInProjectRecents">
+    <findStrings>
+      <find>mr5</find>
+      <find>rotate</find>
+      <find>previewImage</find>
+      <find>showLoading</find>
+    </findStrings>
+  </component>
+  <component name="IdeDocumentHistory">
+    <option name="CHANGED_PATHS">
+      <list>
+        <option value="$PROJECT_DIR$/pages/restaurant/restaurant-order-list/index.js" />
+      </list>
+    </option>
+  </component>
+  <component name="JsBuildToolGruntFileManager" detection-done="true" sorting="DEFINITION_ORDER" />
+  <component name="JsBuildToolPackageJson" detection-done="true" sorting="DEFINITION_ORDER" />
+  <component name="JsFlowSettings">
+    <service-enabled>false</service-enabled>
+    <exe-path />
+    <annotation-enable>false</annotation-enable>
+    <other-services-enabled>false</other-services-enabled>
+    <auto-save>true</auto-save>
+  </component>
+  <component name="JsGulpfileManager">
+    <detection-done>true</detection-done>
+    <sorting>DEFINITION_ORDER</sorting>
+  </component>
+  <component name="ProjectFrameBounds" extendedState="1">
+    <option name="x" value="12" />
+    <option name="y" value="72" />
+    <option name="width" value="1756" />
+    <option name="height" value="1014" />
+  </component>
+  <component name="ProjectView">
+    <navigator currentView="ProjectPane" proportions="" version="1">
+      <flattenPackages />
+      <showMembers />
+      <showModules />
+      <showLibraryContents />
+      <hideEmptyPackages />
+      <abbreviatePackageNames />
+      <autoscrollToSource />
+      <autoscrollFromSource />
+      <sortByType />
+      <manualOrder />
+      <foldersAlwaysOnTop value="true" />
+    </navigator>
+    <panes>
+      <pane id="Scope" />
+      <pane id="ProjectPane">
+        <subPane>
+          <expand>
+            <path>
+              <item name="wxapp_restaurant" type="b2602c69:ProjectViewProjectNode" />
+              <item name="wxapp_restaurant" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="wxapp_restaurant" type="b2602c69:ProjectViewProjectNode" />
+              <item name="wxapp_restaurant" type="462c0819:PsiDirectoryNode" />
+              <item name="pages" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="wxapp_restaurant" type="b2602c69:ProjectViewProjectNode" />
+              <item name="wxapp_restaurant" type="462c0819:PsiDirectoryNode" />
+              <item name="pages" type="462c0819:PsiDirectoryNode" />
+              <item name="restaurant" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="wxapp_restaurant" type="b2602c69:ProjectViewProjectNode" />
+              <item name="wxapp_restaurant" type="462c0819:PsiDirectoryNode" />
+              <item name="pages" type="462c0819:PsiDirectoryNode" />
+              <item name="restaurant" type="462c0819:PsiDirectoryNode" />
+              <item name="pay" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="wxapp_restaurant" type="b2602c69:ProjectViewProjectNode" />
+              <item name="wxapp_restaurant" type="462c0819:PsiDirectoryNode" />
+              <item name="pages" type="462c0819:PsiDirectoryNode" />
+              <item name="restaurant" type="462c0819:PsiDirectoryNode" />
+              <item name="restaurant-order-info" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="wxapp_restaurant" type="b2602c69:ProjectViewProjectNode" />
+              <item name="wxapp_restaurant" type="462c0819:PsiDirectoryNode" />
+              <item name="pages" type="462c0819:PsiDirectoryNode" />
+              <item name="restaurant" type="462c0819:PsiDirectoryNode" />
+              <item name="restaurant-order-list" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="wxapp_restaurant" type="b2602c69:ProjectViewProjectNode" />
+              <item name="wxapp_restaurant" type="462c0819:PsiDirectoryNode" />
+              <item name="pages" type="462c0819:PsiDirectoryNode" />
+              <item name="restaurant" type="462c0819:PsiDirectoryNode" />
+              <item name="restaurant-single" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="wxapp_restaurant" type="b2602c69:ProjectViewProjectNode" />
+              <item name="wxapp_restaurant" type="462c0819:PsiDirectoryNode" />
+              <item name="pages" type="462c0819:PsiDirectoryNode" />
+              <item name="user" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="wxapp_restaurant" type="b2602c69:ProjectViewProjectNode" />
+              <item name="wxapp_restaurant" type="462c0819:PsiDirectoryNode" />
+              <item name="pages" type="462c0819:PsiDirectoryNode" />
+              <item name="user" type="462c0819:PsiDirectoryNode" />
+              <item name="user_index" type="462c0819:PsiDirectoryNode" />
+            </path>
+          </expand>
+          <select />
+        </subPane>
+      </pane>
+      <pane id="Scratches" />
+    </panes>
+  </component>
+  <component name="PropertiesComponent">
+    <property name="WebServerToolWindowFactoryState" value="false" />
+  </component>
+  <component name="RunDashboard">
+    <option name="ruleStates">
+      <list>
+        <RuleState>
+          <option name="name" value="ConfigurationTypeDashboardGroupingRule" />
+        </RuleState>
+        <RuleState>
+          <option name="name" value="StatusDashboardGroupingRule" />
+        </RuleState>
+      </list>
+    </option>
+  </component>
+  <component name="ShelveChangesManager" show_recycled="false">
+    <option name="remove_strategy" value="false" />
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="77bad8a1-78e1-4dbd-91cd-f52cd5515139" name="Default" comment="" />
+      <created>1504768284395</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1504768284395</updated>
+      <workItem from="1504768285541" duration="816000" />
+      <workItem from="1505463058908" duration="4743000" />
+      <workItem from="1505636459380" duration="731000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TimeTrackingManager">
+    <option name="totallyTimeSpent" value="6290000" />
+  </component>
+  <component name="ToolWindowManager">
+    <frame x="12" y="72" width="1756" height="1014" extended-state="1" />
+    <editor active="true" />
+    <layout>
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
+      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
+      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
+      <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
+      <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
+      <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
+      <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+    </layout>
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="1" />
+  </component>
+  <component name="VcsContentAnnotationSettings">
+    <option name="myLimit" value="2678400000" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager />
+    <watches-manager />
+  </component>
+  <component name="editorHistoryManager">
+    <entry file="file://$PROJECT_DIR$/pages/restaurant/pay/index.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/pages/restaurant/restaurant-order-info/info.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding>
+            <marker date="1504857075180" expanded="true" signature="536:1140" ph="{...}" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/pages/restaurant/restaurant-single/index.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/pages/restaurant/restaurant-order-list/index.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1392">
+          <caret line="58" column="29" lean-forward="false" selection-start-line="58" selection-start-column="29" selection-end-line="58" selection-end-column="29" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app.wxss">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="3000">
+          <caret line="125" column="0" lean-forward="false" selection-start-line="125" selection-start-column="0" selection-end-line="125" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/pages/restaurant/restaurant-home/index.wxss">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/pages/restaurant/restaurant-home/index.wxml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="2256">
+          <caret line="94" column="4" lean-forward="false" selection-start-line="94" selection-start-column="4" selection-end-line="94" selection-end-column="4" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/pages/restaurant/restaurant-home/index.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="3888">
+          <caret line="162" column="28" lean-forward="true" selection-start-line="162" selection-start-column="28" selection-end-line="162" selection-end-column="28" />
+          <folding>
+            <marker date="1505613544815" expanded="true" signature="240:4878" ph="{...}" />
+            <marker date="1505613544815" expanded="true" signature="695:1757" ph="{...}" />
+            <marker date="1505613544815" expanded="true" signature="773:1615" ph="{...}" />
+            <marker date="1505613544815" expanded="true" signature="835:1441" ph="{...}" />
+            <marker date="1505613544815" expanded="true" signature="1344:1422" ph="{...}" />
+            <marker date="1505613544815" expanded="true" signature="1447:1609" ph="{...}" />
+            <marker date="1505613544815" expanded="true" signature="1457:1601" ph="//..." />
+            <marker date="1505613544815" expanded="true" signature="1621:1753" ph="{...}" />
+            <marker date="1505613544815" expanded="true" signature="1642:1731" ph="{&quot;title&quot;: '提示'...}" />
+            <marker date="1505613544815" expanded="true" signature="1799:2128" ph="{...}" />
+            <marker date="1505613544815" expanded="true" signature="1876:1988" ph="{...}" />
+            <marker date="1505613544815" expanded="true" signature="1898:1980" ph="{...}" />
+            <marker date="1505613544815" expanded="true" signature="1994:2124" ph="{...}" />
+            <marker date="1505613544815" expanded="true" signature="2015:2102" ph="{&quot;title&quot;: '提示'...}" />
+            <marker date="1505613544815" expanded="true" signature="2170:2516" ph="{...}" />
+            <marker date="1505613544815" expanded="true" signature="2247:2376" ph="{...}" />
+            <marker date="1505613544815" expanded="true" signature="2269:2368" ph="{...}" />
+            <marker date="1505613544815" expanded="true" signature="2382:2512" ph="{...}" />
+            <marker date="1505613544815" expanded="true" signature="2403:2490" ph="{&quot;title&quot;: '提示'...}" />
+            <marker date="1505613544815" expanded="true" signature="2557:2646" ph="{...}" />
+            <marker date="1505613544815" expanded="true" signature="2577:2640" ph="{...}" />
+            <marker date="1505613544815" expanded="true" signature="2681:3147" ph="{...}" />
+            <marker date="1505613544815" expanded="true" signature="2700:2792" ph="{&quot;title&quot;: '地图加载中'...}" />
+            <marker date="1505613544815" expanded="true" signature="2944:3141" ph="{&quot;name&quot;: that.data.this_dish_info.dish_name...}" />
+            <marker date="1505613544815" expanded="true" signature="3187:3304" ph="{...}" />
+            <marker date="1505613544815" expanded="true" signature="3231:3298" ph="{&quot;phoneNumber&quot;: that.data.this_dish_info.dish_con_mobile...}" />
+            <marker date="1505613544815" expanded="true" signature="3333:3447" ph="{...}" />
+            <marker date="1505613544815" expanded="true" signature="3373:3408" ph="{&quot;this_options&quot;: options...}" />
+            <marker date="1505613544815" expanded="true" signature="3480:3941" ph="{...}" />
+            <marker date="1505613544815" expanded="true" signature="3518:3936" ph="{&quot;url&quot;: con.getcompanylist...}" />
+            <marker date="1505613544815" expanded="true" signature="3584:3622" ph="{&quot;wxappid&quot;: con.wxappid...}" />
+            <marker date="1505613544815" expanded="true" signature="3638:3690" ph="{&quot;Content-Type&quot;: &quot;application/json&quot;...}" />
+            <marker date="1505613544815" expanded="true" signature="3719:3930" ph="{...}" />
+            <marker date="1505613544815" expanded="true" signature="3756:3922" ph="{...}" />
+            <marker date="1505613544815" expanded="true" signature="3822:3911" ph="{...}" />
+            <marker date="1505613544815" expanded="true" signature="3977:4147" ph="{...}" />
+            <marker date="1505613544815" expanded="true" signature="4151:4331" ph="//..." />
+            <marker date="1505613544815" expanded="true" signature="4364:4615" ph="{...}" />
+            <marker date="1505613544815" expanded="true" signature="4474:4524" ph="{&quot;previewImage&quot;: that.data.previewImage...}" />
+            <marker date="1505613544815" expanded="true" signature="4659:4872" ph="{...}" />
+            <marker date="1505613544815" expanded="true" signature="4815:4826" ph="{...}" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/pages/user/user_index/user.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1176">
+          <caret line="49" column="6" lean-forward="true" selection-start-line="49" selection-start-column="6" selection-end-line="49" selection-end-column="6" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/pages/user/user_index/user.wxml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1320">
+          <caret line="55" column="6" lean-forward="true" selection-start-line="55" selection-start-column="6" selection-end-line="55" selection-end-column="6" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/pages/restaurant/pay/index.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/pages/restaurant/restaurant-order/index.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="3624">
+          <caret line="151" column="4" lean-forward="false" selection-start-line="151" selection-start-column="4" selection-end-line="151" selection-end-column="4" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/pages/restaurant/restaurant-order-list/index.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1128">
+          <caret line="47" column="35" lean-forward="false" selection-start-line="47" selection-start-column="35" selection-end-line="47" selection-end-column="35" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/pages/restaurant/restaurant-order/index.wxml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="48">
+          <caret line="2" column="25" lean-forward="false" selection-start-line="2" selection-start-column="17" selection-end-line="2" selection-end-column="25" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/font.wxss">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="120">
+          <caret line="23" column="32" lean-forward="false" selection-start-line="23" selection-start-column="32" selection-end-line="23" selection-end-column="32" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/pages/restaurant/restaurant-order/index.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="302">
+          <caret line="152" column="12" lean-forward="false" selection-start-line="152" selection-start-column="11" selection-end-line="152" selection-end-column="12" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app.wxss">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="3000">
+          <caret line="125" column="0" lean-forward="false" selection-start-line="125" selection-start-column="0" selection-end-line="125" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/pages/restaurant/restaurant-home/index.wxss">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/pages/restaurant/restaurant-home/index.wxml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="2256">
+          <caret line="94" column="4" lean-forward="false" selection-start-line="94" selection-start-column="4" selection-end-line="94" selection-end-column="4" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/pages/restaurant/restaurant-single/index.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/pages/restaurant/pay/index.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/pages/restaurant/restaurant-home/index.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="3888">
+          <caret line="162" column="28" lean-forward="false" selection-start-line="162" selection-start-column="28" selection-end-line="162" selection-end-column="28" />
+          <folding>
+            <marker date="1505613544815" expanded="true" signature="240:4878" ph="{...}" />
+            <marker date="1505613544815" expanded="true" signature="695:1757" ph="{...}" />
+            <marker date="1505613544815" expanded="true" signature="773:1615" ph="{...}" />
+            <marker date="1505613544815" expanded="true" signature="835:1441" ph="{...}" />
+            <marker date="1505613544815" expanded="true" signature="1344:1422" ph="{...}" />
+            <marker date="1505613544815" expanded="true" signature="1447:1609" ph="{...}" />
+            <marker date="1505613544815" expanded="true" signature="1457:1601" ph="//..." />
+            <marker date="1505613544815" expanded="true" signature="1621:1753" ph="{...}" />
+            <marker date="1505613544815" expanded="true" signature="1642:1731" ph="{&quot;title&quot;: '提示'...}" />
+            <marker date="1505613544815" expanded="true" signature="1799:2128" ph="{...}" />
+            <marker date="1505613544815" expanded="true" signature="1876:1988" ph="{...}" />
+            <marker date="1505613544815" expanded="true" signature="1898:1980" ph="{...}" />
+            <marker date="1505613544815" expanded="true" signature="1994:2124" ph="{...}" />
+            <marker date="1505613544815" expanded="true" signature="2015:2102" ph="{&quot;title&quot;: '提示'...}" />
+            <marker date="1505613544815" expanded="true" signature="2170:2516" ph="{...}" />
+            <marker date="1505613544815" expanded="true" signature="2247:2376" ph="{...}" />
+            <marker date="1505613544815" expanded="true" signature="2269:2368" ph="{...}" />
+            <marker date="1505613544815" expanded="true" signature="2382:2512" ph="{...}" />
+            <marker date="1505613544815" expanded="true" signature="2403:2490" ph="{&quot;title&quot;: '提示'...}" />
+            <marker date="1505613544815" expanded="true" signature="2557:2646" ph="{...}" />
+            <marker date="1505613544815" expanded="true" signature="2577:2640" ph="{...}" />
+            <marker date="1505613544815" expanded="true" signature="2681:3147" ph="{...}" />
+            <marker date="1505613544815" expanded="true" signature="2700:2792" ph="{&quot;title&quot;: '地图加载中'...}" />
+            <marker date="1505613544815" expanded="true" signature="2944:3141" ph="{&quot;name&quot;: that.data.this_dish_info.dish_name...}" />
+            <marker date="1505613544815" expanded="true" signature="3187:3304" ph="{...}" />
+            <marker date="1505613544815" expanded="true" signature="3231:3298" ph="{&quot;phoneNumber&quot;: that.data.this_dish_info.dish_con_mobile...}" />
+            <marker date="1505613544815" expanded="true" signature="3333:3447" ph="{...}" />
+            <marker date="1505613544815" expanded="true" signature="3373:3408" ph="{&quot;this_options&quot;: options...}" />
+            <marker date="1505613544815" expanded="true" signature="3480:3941" ph="{...}" />
+            <marker date="1505613544815" expanded="true" signature="3518:3936" ph="{&quot;url&quot;: con.getcompanylist...}" />
+            <marker date="1505613544815" expanded="true" signature="3584:3622" ph="{&quot;wxappid&quot;: con.wxappid...}" />
+            <marker date="1505613544815" expanded="true" signature="3638:3690" ph="{&quot;Content-Type&quot;: &quot;application/json&quot;...}" />
+            <marker date="1505613544815" expanded="true" signature="3719:3930" ph="{...}" />
+            <marker date="1505613544815" expanded="true" signature="3756:3922" ph="{...}" />
+            <marker date="1505613544815" expanded="true" signature="3822:3911" ph="{...}" />
+            <marker date="1505613544815" expanded="true" signature="3977:4147" ph="{...}" />
+            <marker date="1505613544815" expanded="true" signature="4151:4331" ph="//..." />
+            <marker date="1505613544815" expanded="true" signature="4364:4615" ph="{...}" />
+            <marker date="1505613544815" expanded="true" signature="4474:4524" ph="{&quot;previewImage&quot;: that.data.previewImage...}" />
+            <marker date="1505613544815" expanded="true" signature="4659:4872" ph="{...}" />
+            <marker date="1505613544815" expanded="true" signature="4815:4826" ph="{...}" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/pages/user/user_index/user.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1176">
+          <caret line="49" column="6" lean-forward="false" selection-start-line="49" selection-start-column="6" selection-end-line="49" selection-end-column="6" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/pages/user/user_index/user.wxml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="550">
+          <caret line="55" column="6" lean-forward="false" selection-start-line="55" selection-start-column="6" selection-end-line="55" selection-end-column="6" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/pages/restaurant/restaurant-order-list/index.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="6288">
+          <caret line="262" column="36" lean-forward="false" selection-start-line="262" selection-start-column="25" selection-end-line="262" selection-end-column="36" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/pages/restaurant/restaurant-order-list/index.wxml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="546">
+          <caret line="153" column="7" lean-forward="false" selection-start-line="153" selection-start-column="7" selection-end-line="153" selection-end-column="7" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/pages/restaurant/restaurant-order-info/info.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="240">
+          <caret line="10" column="37" lean-forward="true" selection-start-line="10" selection-start-column="37" selection-end-line="10" selection-end-column="37" />
+          <folding>
+            <marker date="1504857075180" expanded="true" signature="536:1140" ph="{...}" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+  </component>
+</project>

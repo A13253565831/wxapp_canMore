@@ -1,0 +1,23 @@
+/* pages/restaurant/restaurant-order/index.wxss */
+.r-o{ background: #fff;}
+.ro-item{ padding:30rpx 20rpx;}
+.r-logo{ width: 96rpx; height: 96rpx; margin-right: 20rpx;}
+.r-logo-img{ width: 100%; height: 100%; border-radius: 50%;}
+.r-info{ overflow: hidden;}
+.r-info-d{ line-height: 56rpx;}
+
+.r-info-b{ line-height: 60rpx;}
+.r-i-b{ display:inline-block; vertical-align: bottom; background: #fff; line-height:inherit; font-size:28rpx; }
+.r-i-b:active{color: #fff;}
+.r-i-n{font-weight: 600;}
+
+.r-i-b{color: #09bb07;}
+.r-i-b::after{ border-color: #09bb07; color: white;}
+.r-i-b:active{ background: #09bb07; color: white;}
+.r-i-b.red{ color:#e64340;}
+.r-i-b.red::after{ border-color: #e64340;}
+.r-i-b.red:active{ background: #e64340;color: white;}
+
+.top-select{background:#fff;}
+.top-select .sub{padding: 20rpx 0;}
+.top-select .active{color: #666;border-bottom: 4rpx solid #666;}

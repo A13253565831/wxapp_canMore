@@ -1,0 +1,42 @@
+
+
+/* pages/restaurant/restaurant-reserve-list/list.wxss */
+.flex{
+  padding-top: 20rpx;
+}
+.sub {
+  background: white;
+  padding: 20rpx 0rpx;
+}
+.active {
+  border-bottom: 4rpx solid #009AFF;
+  color: #009AFF;
+}
+
+.ord-info_view{
+  background: white;
+  padding: 10rpx 20rpx;
+}
+.caiming{
+  display: flex;
+  height: 70rpx;
+  justify-content: space-around;
+}
+
+.cai_name{flex: 1;}
+.cai_cont{flex: 1;}
+.cai_cont .text{margin-right: 130rpx;}
+.od-fan .flex{
+  background: white;
+  margin-top: 20rpx;
+  padding: 0 20rpx;
+}
+.fan-i,.lineText,.grey {
+  margin-top: 20rpx;
+}
+
+.btn_clear button{backgound: F5F5F5; border: #009AFF;}
+.btn_clear button:active{background: #009AFF;color: white;}
+.del_view_btn {width: 100%;}
+.del_view_btn .button{float:right; width: 260rpx; height: 80rpx;text-align: center; line-height: 80rpx; background: #F5F5F5;color: red; border: 1rpx solid red;  }
+.del_view_btn .button:active{background: red; color: white;}

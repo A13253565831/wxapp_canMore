@@ -1,0 +1,52 @@
+<!--pages/restaurant/restaurant-diannei-evaluate/evaluate.wxml-->
+<block wx:if="{{glo_is_load}}">
+    <view class="glo_load_view">
+        <text class="iconfont icon-loading animated infinite rotate mr5"></text><text>正在努力加载</text>
+    </view>
+</block>
+
+<block wx:else>
+  
+</block>
+
+<block >
+  <form bindsubmit="bindEvaSubmit">
+      <view class="content_box">
+    <view class="eva-top">
+        <view class="eva_time">
+         <image src="{{image}}"></image> 
+
+         评价日期:{{time}}
+        </view>
+      <view class="eva_button">
+      <button type="primary" form-type="submit" disabled="{{disabled}}">发布评价</button>
+      </view>
+       </view>
+
+      <view class="textarea">
+       <textarea name="text" type="text" placeholder="请输入评价信息" style="width: 98%; padding-left: 2%; height: 300rpx; auto-height: true; background: #F6F6F6;padding-top: 10rpx;font-size: 32rpx; line-height: 43rpx;" />
+      </view>
+
+      <!--<view class="cartoon_upload" bindtap = "bind_up_cartoon">
+        <image src="../../../images/up.png"></image>
+      </view>-->
+
+      
+      <view class="radio_more">
+       <radio-group class="radio-group"  bindchange="radioChange">
+      <label class="radio"  wx:for="{{radios}}">
+    <radio value="{{item.name}}" />{{item.name}}
+      </label>
+
+      </radio-group>
+
+
+       </view>
+      
+    </view>
+
+
+      
+      
+  </form>
+</block>

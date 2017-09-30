@@ -1,0 +1,61 @@
+<!--pages/restaurant/restaurant-reserve/index.wxml-->
+<block wx:if="{{global_is_load}}">
+  <view class="glo_load_view">
+        <text class="iconfont icon-loading animated infinite rotate mr5"></text><text>正在努力加载</text>
+    </view>
+</block>
+<block wx:else>
+
+<form bindsubmit="formSubmit" bindreset="formReset">
+<view wx:if="{{this_dish_info.dish_yuding_gonggao}}" class="ding_msg">{{this_dish_info.dish_yuding_gonggao}}</view>
+<view class="reserve">
+    <!--预定日期-->
+    <view class="list flex gridXb">
+        <view class="weui-cell__bd">预定日期</view>
+        <view class="weui-cell__ft">
+            <picker name="yuding_date" bindchange="bindDateChange" mode="date" value="{{date_time}}" start="2015-09-01" end="2030-12-12" bindchange="bindDateChange">{{date_time}}</picker>
+        </view>
+    </view>
+    <!--用餐时间-->
+    <view class="list flex gridXb">
+        <view class="weui-cell__bd">用餐时间</view>
+        <view class="weui-cell__ft">
+            <picker name="yuding_time" bindchange="bindTimeChange" mode="time" value="{{time_time}}" start="00:01" end="23:59">
+            {{time_time}}
+            </picker>
+        </view>
+    </view>
+    <!--用餐人数-->
+    <view class="list flex gridXb">
+        <view class="weui-cell__bd">用餐人数</view>
+        <input class="weui-cell__ft" name="yuding_renshu" placeholder="用餐人数"  />
+    </view>
+    <!--姓名-->
+    <view class="list flex gridXb">
+        <view class="weui-cell__bd">预定人</view>
+        <input class="weui-cell__ft" name="yuding_name" placeholder="您的姓名" />
+    </view>
+    <!--手机号-->
+    <view class="list flex gridXb">
+        <view class="weui-cell__bd">手机号</view>
+        <input class="weui-cell__ft" name="yuding_phone" placeholder="您的手机号" />
+    </view>
+    <!--预定费-->
+    <!--<view class="weui-cell">
+        <view class="weui-cell__bd">预定费</view>
+        <view class="num weui-cell__ft">10元</view>
+    </view>-->
+</view>
+<!--备注-->
+<view class="weui-cells weui-cells_form">
+    <view class="weui-cell">
+        <textarea class="weui-textarea" name="yuding_info"  placeholder="请输入您相对商家补充说明的内容" rows="2"/>
+    </view>
+</view>
+<!--确定按钮-->
+<view class="weui-btn-area">
+    <button type="primary" hover-class="none" formType="submit" loading="{{submitIsLoading}}" disabled="{{buttonIsDisabled}}">确定</button>
+</view>
+</form>
+
+</block>

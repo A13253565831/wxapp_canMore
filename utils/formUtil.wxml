@@ -1,0 +1,70 @@
+<template name="formUtil">
+  <block wx:for="{{formData}}" wx:key="*this">
+    <!--<view class="content-padded" wx:if="{{item.is_show_title}}">{{item.title}}</view>-->
+    <view class="input-group">
+      <template is="formCreate" data="{{controls:item.controls,group:index}}" />
+    </view>
+  </block>
+</template>
+<template name="formCreate">
+  <block wx:for="{{controls}}" wx:for-item="control" wx:for-index="name" wx:key="*this">
+    <view class="input-row flex gridXb">
+      <view class="title">{{control.label}}</view>
+      <block wx:if="{{control.type=='text'||control.type=='number'||control.type=='idcard'||control.type=='digit'}}">
+        <input class="sub grey" type="{{control.type}}" placeholder="{{control.placeholder}}" name="{{name}}" maxlength="128" value="{{control.value}}" data-name="{{name}}" data-type="input" data-group="{{group}}" bindinput="{{control.bindChange?control.bindChange:'onBindChange'}}"
+        />
+      </block>
+      <block wx:elif="{{control.type=='textarea'}}">
+        <textarea class="sub ml10" placeholder="{{control.placeholder}}" name="{{name}}" value="{{control.value}}" maxlength="255" data-name="{{name}}" data-type="textarea" data-group="{{group}}" bindinput="{{control.bindChange?control.bindChange:'onBindChange'}}"
+        />
+      </block>
+      <block wx:elif="{{control.type=='checkbox'}}">
+        
+        <checkbox-group class="input-static sub grey" bindchange="onBindChange" data-name="{{name}}" data-type="checkbox" data-group="{{group}}">
+        <scroll-view scroll-y>
+          <label wx:for="{{control.extra}}" wx:for-item="checkbox" wx:key="*this">
+            <checkbox value="{{index}}" checked="{{control.value[index]?'checked':''}}" />{{checkbox}}
+            <input type="text" hidden="true" name="{{name}}[{{index}}]" value="{{index}}" wx:if="{{control.value[index]}}" />
+          </label>
+          </scroll-view>
+        </checkbox-group>
+      </block>
+      <block wx:elif="{{control.type=='radio'}}">
+        <radio-group class="input-static sub grey" bindchange="onBindChange" data-name="{{name}}" data-type="radio" data-group="{{group}}">
+          <input type="text" hidden="true" name="{{name}}" value="{{control.value}}" />
+          <label class="mr5" wx:for="{{control.extra}}" wx:for-item="radio" wx:key="*this">
+            <radio value="{{index}}" checked="{{control.value==index?'checked':''}}" />{{radio}}
+          </label>
+        </radio-group>
+      </block>
+      <block wx:elif="{{control.type=='datetime'}}">
+        <view class="input-static flex grey">
+          <input type="text" hidden="hidden" name="{{name}}" value="{{control.value[0]}} {{control.value[1]}}" />
+          <view class="title"></view>
+          <picker class="sub" mode="date" value="{{control.value[0]}}" bindchange="onBindChange" data-name="{{name}}" data-type="datetime" data-child-type="date" data-group="{{group}}">
+            {{control.value[0]}}
+          </picker>
+          <picker class="sub" mode="time" value="{{control.value[1]}}" bindchange="onBindChange" data-name="{{name}}" data-type="datetime" data-child-type="time" data-group="{{group}}">
+            {{control.value[1]}}
+          </picker>
+        </view>
+      </block>
+      <block wx:elif="{{control.type=='date'}}">
+        <view class="input-static flex grey">
+          <input type="text" hidden="hidden" name="{{name}}" value="{{control.value}}" />
+          <view class="title"></view>
+          <picker class="sub" mode="date" value="{{control.value}}" bindchange="onBindChange" data-name="{{name}}" data-type="date" data-group="{{group}}">{{control.value}}
+          </picker>
+        </view>
+      </block>
+      <block wx:elif="{{control.type=='time'}}">
+        <view class="input-static flex grey">
+          <input type="text" hidden="hidden" name="{{name}}" value="{{control.value}}" />
+          <view class="title"></view>
+          <picker class="sub" mode="time" value="{{control.value}}" bindchange="onBindChange" data-name="{{name}}" data-type="time" data-group="{{group}}">{{control.value}}
+          </picker>
+        </view>
+      </block>
+    </view>
+  </block>
+</template>

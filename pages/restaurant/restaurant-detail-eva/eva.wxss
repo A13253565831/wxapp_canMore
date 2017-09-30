@@ -1,0 +1,95 @@
+/* pages/restaurant/restaurant-detail-eva/eva.wxss */
+.pj_person {
+  
+  background: white;
+  padding: 15rpx ;
+  margin-top: 15rpx;
+}
+
+.pj_person_name {
+  line-height: 80rpx;
+  padding-bottom: 15rpx;
+  border-bottom: 1rpx solid #F5F5F5;
+}
+
+.pj_person_name>image{
+  width: 80rpx;
+  height: 80rpx;
+  border-radius: 50%;
+}
+
+.pj_person_name .text{
+  color: orangered;
+  font-size: 40rpx;
+}
+.pingjia_chose{
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+  text-align: center;
+  background: white;
+}
+
+.pingjia_chose .pj_v {
+  width: 50%;
+  height: 80rpx;
+  padding-top: 15rpx;
+  padding-bottom: 15rpx;  
+}
+
+.pj_v .btn{
+  width: 250rpx;
+  height: 100%;
+  display: inline-block;
+  text-align: center;
+  line-height: 60rpx;
+  font-size: 30rpx;
+}
+
+.btn:active{
+  background: #009AFF;
+  color: white;
+}
+
+.total_pj {
+  width: 100%;
+  height: 80rpx;
+}
+.total_btn {
+  width: 260rpx;
+  height: 60rpx;
+  text-align: center;
+  line-height: 60rpx;
+}
+.pj_cai_img{
+
+  line-height: 60rpx;
+  padding-top:15rpx;
+  padding-bottom: 15rpx;
+  border-bottom: 1rpx solid #F5F5F5;
+}
+.pj_cont{
+  padding-bottom: 10rpx;
+  padding-top: 10rpx;
+  border-bottom: 1rpx solid #F5F5F5;
+}
+
+.pj_cai_img image{
+  width: 60rpx;
+  height: 60rpx;
+  margin-right: 20rpx;
+}
+.total_btn:active{
+  background: #009AFF;
+  color: white;
+}
+
+
+.pj_box{
+  padding-top: 10rpx;
+}
+
+.total_pj{
+  padding-top: 15rpx;
+  padding-bottom: 15rpx;
+}

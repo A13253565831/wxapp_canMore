@@ -1,0 +1,205 @@
+<!--pages/user/user-waimai-detail/index.wxml-->
+<block wx:if="{{glo_is_load}}">
+  <view class="glo_load_view">
+    <text class="iconfont icon-loading animated infinite rotate mr5"></text>
+    <text>正在努力加载</text>
+  </view>
+</block>
+<block wx:else>
+  <view class="my-code tc" wx:if="{{oinfo.order_type == 1}}">
+    <!--<view class="my-i">
+      <view class="f36 mb10">{{oinfo.order_haoma}}</view>
+      <text class="f18">排号</text>
+    </view>-->
+    <!--<view class="my-i">
+      <view class="f36 mb10">{{oinfo.order_table_id}}</view>
+      <text class="f18">桌号</text>
+    </view>-->
+  </view>
+  <view class="od-box">
+
+    <!--订单明细 start-->
+    <view class="grey od-tit f16">
+      <text class="iconfont icon-cart"></text> 订单明细
+    </view>
+    <view class="ord-info">
+      <view class="od-a arrowR" id="{{oinfo.company_id}}">
+        <image src="{{oinfo.Logo}}" mode="aspectFill" class="od-a-img mr10"></image>
+        <text class="f18">{{oinfo.company_name}}</text>
+      </view>
+      <view class="od-fan gridXt mt10">
+        <block wx:for="{{oinfo.goodsList}}" wx:for-item="gitem">
+          <view class="flex">
+            <view class="sub fan-n">
+               <view class="lineText">{{gitem.goods_attr}}</view>
+               <!--<view class="lineText guige linght f12">{{gitem.goods_attr}}</view>-->
+            </view>
+            <view class="fan-r grey">
+              <text class="iconfont icon-close"></text> {{gitem.goods_num}}
+            </view>
+            <view class="fan-r">
+              ￥{{gitem.goods_price}}
+            </view>
+          </view>
+        </block>
+      </view>
+
+      <view class="od-fan gridXt" wx:if="{{oinfo.order_type == 2}}">
+      <!--<view class="flex">
+                <view class="sub fan-n lineText">
+                    餐盒费
+                </view>
+                <view class="fan-r">
+                    +￥{{oinfo.dabao_fee}}
+                </view>
+            </view>
+            <view class="flex">
+                <view class="sub fan-n lineText">
+                    配送费
+                </view>
+                <view class="fan-r">
+                    +￥{{oinfo.shipping_fee}}
+                </view>
+            </view>-->
+        </view>
+
+
+        <!--<view class="od-fan gridXt">
+            <view class="flex">
+                <view class="sub fan-n lineText">
+                    满减优惠
+                </view>
+                <view class="fan-r">
+                    -￥20
+                </view>
+            </view>
+            <view class="flex">
+                <view class="sub fan-n lineText">
+                    门店新客立减
+                </view>
+                <view class="fan-r">
+                    -￥20
+                </view>
+            </view>
+        </view>-->
+      <view class="mt5 f12 juan">
+        <view class="juan-list flex" wx:if="{{oinfo.huodong_shou_jiner > 0}}">
+          <text class="greenbg write mr5">新</text>
+          <text class="grey sub">新用户立减</text>
+          <text class="red">-￥{{oinfo.huodong_shou_jiner}}</text>
+        </view>
+        <view class="juan-list flex" wx:if="{{oinfo.huodong_quan_jiner > 0}}">
+          <text class="redbg write mr5">劵</text>
+          <text class="grey sub">代金券</text>
+          <text class="red">-￥{{oinfo.huodong_quan_jiner}}</text>
+        </view>
+        <view class="juan-list flex" wx:if="{{oinfo.huodong_manjin_jiner > 0}}">
+          <text class="orangebg write mr5">减</text>
+          <text class="grey sub">满减</text>
+          <text class="red">-￥{{oinfo.huodong_manjin_jiner}}</text>
+        </view>
+      </view>
+    <view class="gridXt f16" style="padding:40rpx 0;">
+      <view class="fr">
+        总计
+        <text class="green">￥<text class="f24">{{oinfo.order.order_price}}</text></text>
+      </view>
+
+      <view class="grey">
+        <text class="mr10"></text>
+        <text></text>
+      </view>
+    </view>
+
+  </view>
+  <!--订单明细 end-->
+  <!--配送信息-->
+  <!--wx:if="{{oinfo.order_type == 2}}"-->
+  <block>
+  <view class="grey od-tit f16">
+    <text class="iconfont icon-deliver"></text> 配送信息
+  </view>
+  <view class="ord-info">
+    <view class="od-fan">
+      <view class="flex">
+        <view class="fan-i lineText grey">
+          用户姓名
+        </view>
+        <view class="sub ml15">
+          {{oinfo.recipients.re_name}}
+        </view>
+      </view>
+      <view class="flex">
+        <view class="fan-i lineText grey">
+          手机号码
+        </view>
+        <view class="sub ml15">
+          {{oinfo.recipients.phone}}
+        </view>
+      </view>
+      <view class="flex">
+        <view class="fan-i lineText grey">
+          配送地址
+        </view>
+        <view class="sub ml15">
+          {{oinfo.recipients.province}}{{oinfo.recipients.city}}{{oinfo.recipients.area}}{{oinfo.recipients.address}}
+        </view>
+      </view>
+    </view>
+  </view>
+  </block>
+  <!--订单信息 start-->
+  <view class="grey od-tit f16">
+    <text class="iconfont icon-form_light"></text> 订单信息
+  </view>
+  <view class="ord-info" style="padding-bottom:10px;">
+    <view class="od-fan">
+      <view class="flex">
+        <view class="fan-i lineText grey">
+          订单号码
+        </view>
+        <view class="sub ml15">
+          {{oinfo.order.order_sn}}
+        </view>
+      </view>
+      <view class="flex">
+        <view class="fan-i lineText grey">
+          订单时间
+        </view>
+        <view class="sub ml15">
+          {{oinfo.order.createtime}}
+        </view>
+      </view>
+      <view class="flex">
+        <view class="fan-i lineText grey">
+          支付方式
+        </view>
+        <view class="sub ml15">
+          {{oinfo.order.paytype_txt}}
+        </view>
+      </view>
+      <view class="flex">
+        <view class="fan-i lineText grey">
+          支付状态
+        </view>
+        <view class="sub ml15">
+          {{oinfo.order.pay_status_txt}}
+        </view>
+      </view>
+      <view class="flex">
+        <view class="fan-i lineText grey">
+          备注信息
+        </view>
+        <view class="sub ml15">
+          {{oinfo.order.remark||'无'}}
+        </view>
+      </view>
+    </view>
+  </view>
+  <!--订单信息 end-->
+  </view>
+
+  <view class="od-f">
+    <button type="primary" hover-class="none" class="od-f-btn" bindtap="go_dish_info_bind" id="{{oinfo.dish_id}}">返回我的页面</button>
+  </view>
+</block>

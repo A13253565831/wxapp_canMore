@@ -1,0 +1,252 @@
+<block wx:if="{{glo_is_load}}">
+  <view class="glo_load_view">
+    <text class="iconfont icon-loading animated infinite rotate mr5"></text>
+    <text>正在努力加载</text>
+  </view>
+</block>
+<block wx:else>
+  <block wx:if="{{data_list.glist == null || data_list.glist == ''}}">
+    <!--暂无内容提示 start-->
+    <view class="no-content tc">
+      <text class="no-content-icon iconfont icon-yemianwuneirong"></text>
+      <view class="no-content-font">购物车暂无商品</view>
+    </view>
+    <!--暂无内容提示 end-->
+  </block>
+  <block wx:else>
+    <form bindsubmit="order_formSubmit" report-submit="true">
+      <!--添加地址-->
+      <!--wx:if="{{this_order_type == 2}}"  -->
+      <block >
+        
+        <block wx:if="{{wx_address_info}}">
+          <view class="adress line gridXb" data-id="{{address.default_id}}" bindtap="select_address_bind">
+            <view>
+              <text class="red mr10 iconfont icon-peoplefill"></text> 收货人:{{wx_address_info.re_name}}
+              <text class="ml15">电话:{{wx_address_info.phone}}</text>
+            </view>
+            <view class="grey">
+              <text class="red mr10 f16 iconfont icon-locationfill"></text>
+              <text>收货地址:{{wx_address_info.province}}{{wx_address_info.city}}{{wx_address_info.area}}{{wx_address_info.address}}</text>
+            </view>
+          </view>
+        </block>
+       
+        <block wx:else>
+          <view class="addadress gridXb" bindtap="select_address_bind">
+            <text class="red f16 mr10 iconfont icon-add"></text>
+            <text>选择收货地址</text>
+          </view>
+        </block>
+
+        <!--<view class="addadress flex"><text>送达时间</text><text class="sub blue tr">立即送出（大约17:17)</text></view>-->
+      </block>
+      <view class="ress-c mt10 clearfix">
+        <view class="ress-c-i flex gridXb">
+          <view class="ress-cl f16 sub">
+            <text class="iconfont icon-shop green"></text> {{dish_data.dish_info[0].dish_name}}（{{dish_data.dish_info[0].dish_quyu}}）
+          </view>
+          <view class="ress-cr linght"></view>
+        </view>
+        <block wx:for="{{data_list.glist}}">
+          <view class="ress-c-i flex gridXb">
+            <view class="ress-cl f16">
+              <view>{{item.name}}</view>
+              <view class="linght f12">{{item.goods_attr}}</view>
+            </view>
+            <view class="ress-cc sub">
+              <text class="iconfont icon-close linght"></text> {{item.dish_num}}
+            </view>
+            <view class="ress-cr linght">￥{{item.price}}</view>
+          </view>
+        </block>
+
+      </view>
+
+      <!-- <view class="ress-c mt10" wx:if="{{this_table_list && this_order_type==1}}">
+        <view class="ress-c-i flex" bindtap="show_table_layout_bind">
+          <view class="ress-name f16">
+            <text class="grey">桌号：</text>
+          </view>
+          <view class="sub tr arrowR choose-zhuohao">
+            <text>{{this_table_name||'请选择'}}</text>
+          </view>
+        </view>
+      </view> -->
+
+      <view class="ress-c mt10">
+        <view class="ress-c-i flex">
+          <view class="ress-name f16">
+            <text>备注：</text>
+          </view>
+          <view class="sub">
+            <textarea type="text"  class="ress-c-tt f16"  name="post_info" placeholder="给商家留言" />
+          </view>
+        </view>
+      </view>
+
+      <!-- <view class="ress-tag-box grey" wx:if="{{dish_data.dish_info.dish_beizhu_text}}">
+        <block wx:for="{{dish_data.dish_info.dish_beizhu_text}}">
+        <text bindtap="select_beizhu_bind" data-info="{{item}}" class="ress-tag gridFourCirle mt5 mr5 lineText">{{item}}</text>
+        </block>
+      </view> -->
+
+      <view class="ress-c mt10 clearfix">
+        <view class="ress-c-i flex gridXb">
+          <view class="ress-cl green f18 sub">
+
+          </view>
+           <view class="ress-cr">
+            总计：￥{{all_g_price}}
+          </view> 
+        </view>
+        <!--<view class="mt10 mb10 f12">-->
+          <!-- <block wx:if="{{this_order_type == 2}}">
+          <view class="juan-list flex">
+              <text class="redbg write mr5">餐</text>
+              <text class="grey sub">餐盒费</text>
+              <text class="red f14">+￥{{all_g_dabao_price||0}}</text>
+            </view>
+            <view class="juan-list flex">
+              <text class="redbg write mr5">配</text>
+              <text class="grey sub">配送费</text>
+              <text class="red f14">+￥{{dish_data.dish_info.waimai_peisong_jiner}}</text>
+            </view>
+          </block>
+          <block wx:if="{{data_list.is_huodong_shou_status == 1}}">
+            <view class="juan-list flex">
+              <text class="greenbg write mr5">新</text>
+              <text class="grey sub">{{data_list.is_huodong_shou_info}}</text>
+              <text class="red f14">-￥{{data_list.is_huodong_shou_jiner}}</text>
+            </view>
+          </block>
+          <block wx:if="{{data_list.is_huodong_mianjian_status == 1}}">
+            <view class="juan-list flex">
+              <text class="orangebg write mr5">减</text>
+              <text class="grey sub">{{data_list.is_huodong_mianjian_info}}</text>
+              <text class="red f14">-￥{{data_list.is_huodong_mianjian_jiner}}</text>
+            </view>
+          </block> -->
+          <!-- <view class="juan-list flex" bindtap="go_select_dai_bind">
+            <text class="redbg write mr5">劵</text>
+            <text class="grey sub">代金券</text>
+            <text class="red f14">{{this_quan_info}}</text>
+          </view> -->
+        <!--</view>-->
+      </view>
+
+      <!-- 浮动购物车 start-->
+      <view class="ress-c-b">
+        <view class="ress-float gridXt flex">
+          <view class="float-price sub">
+            <view class="price-count f20 red">
+
+              <text>￥{{all_g_price}}</text>
+            </view>
+          </view>
+          <view class="float-btn">
+            <button type="primary" form-type="submit" class="float-btn-s" >立即支付</button>
+          </view>
+        </view>
+      </view>
+      
+      <!-- 浮动购物车 end-->
+
+     
+      <!--支付方式选择 end-->
+      <!--选择桌号-->
+      <!-- <view class="floatBox zhuohao" wx:if="{{is_show_table_layer}}">
+        <view class="zh-box">
+          <view class="zh-title-box">
+            <view class="zh-title tc gridXb">
+              <text>请选择桌号</text>
+              <text class="fr grey f16 iconfont icon-roundclose" bindtap="show_table_layout_bind"></text>
+            </view>
+          </view>
+          <radio-group bindchange="selectTable_bind">
+            <block wx:for="{{this_table_list}}">
+              <label class="zh-list gridXb">
+                <radio value="{{item.id}}" />
+                <text>{{item.table_name}}</text>
+              </label>
+            </block>
+          </radio-group>
+        </view>
+        <view class="floatBox floatBoxBg" style="display:block;" bindtap="show_table_layout_bind"></view>
+      </view> -->
+
+      <!--选择代金券-->
+      <!-- <view wx:if="{{is_show_quan_layer}}">
+        <scroll-view class="daijinjuan" scroll-y="true">
+          <view class="zh-title-box">
+            <view class="zh-title tc gridXb">
+              <text>请选择代金券</text>
+              <text class="fr grey f16 iconfont icon-roundclose" bindtap="go_select_dai__hide_bind"></text>
+            </view>
+          </view> -->
+          <!--<view class="nonsue tc" bindtap="set_quan_bind" id="0">
+            <label> 不使用代金券
+              <radio></radio>
+            </label>
+          </view>-->
+          <!--暂无内容提示 start-->
+          <!-- <block wx:if="{{quan_list == null || quan_list == ''}}">
+            <view class="no-content tc">
+              <text class="no-content-icon iconfont icon-yemianwuneirong"></text>
+              <view class="no-content-font">暂无可用代金券</view>
+            </view>
+          </block> -->
+          <!--暂无内容提示 end-->
+          <!-- <block wx:else>
+            <block wx:for="{{quan_list}}">
+            <block wx:if="{{item.quan_limit_jiner<all_g_price}}">
+              <view class="canuse">
+                <view class="dollar-item" bindtap="quan_select_one_bind" data-id="{{item.id}}" data-jiner="{{item.quan_jiner}}" data-name="{{item.quan_name}}">
+                  <view class="top write">
+                    <view class="status tc f18">{{item.quan_name}}</view>
+                    <view class="money-msg f16 fr">¥
+                      <text class="money">{{item.quan_jiner}}</text>
+                    </view>
+                  </view>
+                  <view class="bottom flex">
+                    <view class="grey sub">
+                      <view>
+                        <text class="iconfont icon-time mr10 linght"></text>有效期至：{{item.quan_end_time}}</view>
+                      <view>
+                        <text class="iconfont icon-info mr10 linght linetext"></text>满{{item.quan_limit_jiner}}元可用</view>
+                    </view>
+                    <view class="status-usebtn tc fr">使用</view>
+                  </view>
+                </view>
+              </view>
+              </block>
+              <block wx:else>
+              <view class="canuse">
+                <view class="dollar-item not_use">
+                  <view class="top write">
+                    <view class="status tc f18">{{item.quan_name}}</view>
+                    <view class="money-msg f16 fr">¥
+                      <text class="money">{{item.quan_jiner}}</text>
+                    </view>
+                  </view>
+                  <view class="bottom flex">
+                    <view class="grey sub">
+                      <view>
+                        <text class="iconfont icon-time mr10 linght"></text>有效期至：{{item.quan_end_time}}</view>
+                      <view>
+                        <text class="iconfont icon-info mr10 linght linetext"></text>满{{item.quan_limit_jiner}}元可用</view>
+                    </view>
+                    <view class="status-usebtn tc fr">不可用</view>
+                  </view>
+                </view>
+              </view>
+              </block>
+            </block>
+          </block>
+        </scroll-view>
+        <view class="floatBox floatBoxBg" style="display:block;" bindtap="go_select_dai__hide_bind"></view>
+      </view> -->
+
+    </form>
+  </block>
+</block>

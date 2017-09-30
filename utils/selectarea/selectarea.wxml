@@ -1,0 +1,18 @@
+<view class="cy_shade box box-tb {{isShow ? 'cy_show' : ''}}"></view>
+<view class="cy_selector-area box box-tb {{isShow ? 'cy_show' : ''}}">
+  <view class="cy_handle-bar box box-lr box-align-center">
+    <text class="btn cancel flex" bindtap="cancel">取消</text>
+    <text class="btn cy_confirm flex" bindtap="confirm">确定</text>
+  </view>
+  <view class="cy_area-selector box box-lr">
+    <scroll-view class="cy_selector province flex" data-type="province" scroll-y="true">
+      <view wx:for="{{proviceData}}" bindtap="tapProvince" data-full-name="{{item.fullName}}" data-index="{{index}}" data-code="{{item.code}}" class="cy_picker {{selectedProvince.index == index ? 'cy_actived' : ''}}">{{item.fullNameDot}}</view>
+    </scroll-view>
+    <scroll-view class="cy_selector city flex" data-type="city" scroll-y="true">
+      <view wx:for="{{cityData}}" bindtap="tapCity" data-full-name="{{item.fullName}}" data-index="{{index}}" data-code="{{item.code}}" class="cy_picker {{selectedCity.index == index ? 'cy_actived' : ''}}">{{item.fullNameDot}}</view>
+    </scroll-view>
+    <scroll-view wx:if="{{showDistrict}}" class="cy_selector district flex" data-type="district" scroll-y="true">
+      <view wx:for="{{districtData}}" bindtap="tapDistrict" data-full-name="{{item.fullName}}" data-index="{{index}}" data-code="{{item.code}}" class="cy_picker {{selectedDistrict.index == index ? 'cy_actived' : ''}}">{{item.fullNameDot}}</view>
+    </scroll-view>
+  </view>
+</view>

@@ -1,0 +1,136 @@
+<!--pages/restaurant/restaurant-reserve-detail/detail.wxml-->
+<block wx:if="{{glo_is_load}}">
+  <view class="glo_load_view">
+    <text class="iconfont icon-loading animated infinite rotate mr5"></text>
+    <text>正在努力加载</text>
+  </view>
+</block>
+<block wx:else>
+  <block wx:if="{{data_list.glist == null || data_list.glist == ''}}">
+    <!--暂无内容提示 start-->
+    <view class="no-content tc">
+      <text class="no-content-icon iconfont icon-yemianwuneirong"></text>
+      <view class="no-content-font">暂无菜品信息</view>
+    </view>
+    <!--暂无内容提示 end-->
+  </block>
+  <block wx:else>
+    <form bindsubmit="order_formSubmit" report-submit="false">
+     
+
+      <view class="ress-c mt10 clearfix">
+        <view class="ress-c-i flex gridXb">
+          <view class="ress-cl f16 sub">
+            <text class="iconfont icon-shop green"></text> {{dish_data.dish_info[0].dish_name}}（{{dish_data.dish_info[0].dish_quyu}}）
+          </view>
+          <view class="ress-cr linght"></view>
+        </view>
+        <block wx:for="{{data_list.glist}}">
+          <view class="ress-c-i flex gridXb">
+            <view class="ress-cl f16">
+              <view>{{item.name}}</view>
+              <view class="linght f12">{{item.goods_attr}}</view>
+            </view>
+            <view class="ress-cc sub">
+              <text class="iconfont icon-close linght"></text> {{item.dish_num}}
+            </view>
+            <view class="ress-cr linght">￥{{item.price}}</view>
+          </view>
+        </block>
+
+      </view>
+
+
+      <view class="reserve">
+    <!--预定日期-->
+    <view class="list flex gridXb">
+        <view class="weui-cell__bd">预定日期</view>
+        <view class="weui-cell__ft">
+            <picker name="yuding_date" bindchange="bindDateChange" mode="date" value="{{date_time}}" start="2015-09-01" end="2030-12-12" bindchange="bindDateChange">{{date_time}}</picker>
+        </view>
+    </view>
+    <!--用餐时间-->
+    <view class="list flex gridXb">
+        <view class="weui-cell__bd">用餐时间</view>
+        <view class="weui-cell__ft">
+            <picker name="yuding_time" bindchange="bindTimeChange" mode="time" value="{{time_time}}" start="00:01" end="23:59">
+            {{time_time}}
+            </picker>
+        </view>
+    </view>
+    <!--用餐人数-->
+    <view class="list flex gridXb">
+        <view class="weui-cell__bd">用餐人数</view>
+        <input class="weui-cell__ft" name="yuding_renshu" placeholder="用餐人数"  />
+    </view>
+    <!--姓名-->
+    <view class="list flex gridXb">
+        <view class="weui-cell__bd">预定人</view>
+        <input class="weui-cell__ft" name="yuding_name" placeholder="您的姓名" />
+    </view>
+    <!--手机号-->
+    <view class="list flex gridXb">
+        <view class="weui-cell__bd">手机号</view>
+        <input class="weui-cell__ft" name="yuding_phone" placeholder="您的手机号" />
+    </view>
+    
+</view>
+
+
+
+
+      
+
+      <view class="ress-c mt10">
+        <view class="ress-c-i flex">
+          <view class="ress-name f16">
+            <text>备注：</text>
+          </view>
+          <view class="sub">
+            <textarea type="text"  class="ress-c-tt f16"  name="post_info" placeholder="给商家留言" />
+          </view>
+        </view>
+      </view>
+
+      
+
+      <view class="ress-c mt10 clearfix">
+        <view class="ress-c-i flex gridXb">
+          <view class="ress-cl green f18 sub">
+
+            <view class="ress-cr">
+            菜品价格总计: ￥ {{all_g_price}}
+          </view>
+           
+          <view class="dingjin">
+            须预订金额: ￥{{yudingjin}}
+           </view>
+
+          </view>
+           
+           
+
+        </view>
+        
+      </view>
+
+      <!-- 浮动购物车 start-->
+      <view class="ress-c-b">
+        <view class="ress-float gridXt flex">
+          <view class="float-price sub">
+            <view class="price-count f20 red">
+
+              <text>支付预订金额 ￥{{yudingjin}}</text>
+            </view>
+          </view>
+          <view class="float-btn">
+            <button type="primary" form-type="submit" class="float-btn-s" >预付订金</button>
+          </view>
+        </view>
+      </view>
+      
+      
+
+    </form>
+  </block>
+</block>

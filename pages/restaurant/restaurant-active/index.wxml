@@ -1,0 +1,37 @@
+<!--pages/restaurant/restaurant-active/index.wxml-->
+<view class="contenter write">
+  <image class="bg-img" src="{{this_dish_info.dish_logo}}" mode="aspectFill"></image>
+  <scroll-view scroll-y="true" >
+    <!--商家信息-->
+    <view class="business tc">
+      <view class="f24">{{this_dish_info.dish_name}}</view>
+      <!--星级-->
+      <view class="star mt5 mb10">
+        <block wx:for="{{this_dish_info.dish_shi_xing}}">
+                <text class="iconfont icon-xingjifull"></text>
+            </block>
+            <block wx:for="{{this_dish_info.dish_kong_xing}}">
+                <text class="iconfont icon-xingjiline"></text>
+            </block>
+      </view>
+      <view class="f12 huibai">配送时间：{{this_dish_info.dish_open_btime}}:00-{{this_dish_info.dish_open_etime}}:00</view>
+    </view>
+    <!--优惠信息-->
+    <view class="coupon">
+      <view class="title f18 flex"><text class="line sub mr10"></text><text></text>优惠信息<text class="line sub ml10"></text></view>
+      <view class="mt20">
+      <block wx:for="{{this_dish_info.huodong_list}}" wx:for-item="hditem">
+        <view class="juan-list"><text class="{{hditem.hd_style}} mr5">{{hditem.hd_title}}</text><text>{{hditem.hd_info}}</text></view>
+        </block>
+      </view>
+    </view>
+    <!--商家公告-->
+    <view class="coupon">
+      <view class="title f18 flex"><text class="line sub mr10"></text><text></text>门店公告<text class="line sub ml10"></text></view>
+      <view class="mt20">
+        <view>{{this_dish_info.dish_yuding_gonggao}}</view>
+      </view>
+    </view>
+  </scroll-view>
+  <view class="close tc mt20" bindtap="go_back_bind"><text class="f36 iconfont icon-roundclose"></text></view>
+</view>

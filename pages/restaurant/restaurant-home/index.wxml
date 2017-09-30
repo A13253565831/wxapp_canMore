@@ -1,0 +1,101 @@
+<block wx:if="{{glo_is_load}}">
+    <view class="glo_load_view">
+        <text class="iconfont icon-loading animated infinite rotate mr5"></text><text>正在努力加载</text>
+    </view>
+</block>
+<block wx:else>
+
+<block >
+<view class="top-msg mb10">
+  <image class="topbg" src="{{this_dish_info.dish_img}}" mode="aspectFill"></image>
+  <view class="top-content flex write">
+    <view class="logo-img mr10">
+      <image src="{{this_dish_info.dish_img}}" mode="aspectFill"></image>
+    </view>
+    <view class="">
+      <view>
+        <!--店铺名称-->
+        <view class="name f16">
+        {{this_dish_info.dish_name}}
+        <block wx:if="{{this_dish_info.dish_quyu}}">
+        ({{this_dish_info.dish_quyu}})
+        </block>
+        </view>
+
+        <!--星级-->
+        <view class="star">
+          <block wx:for="{{this_dish_info.dish_shi_xing}}">
+                <text class="iconfont icon-xingjifull"></text>
+            </block>
+            <block wx:for="{{this_dish_info.dish_kong_xing}}">
+                <text class="iconfont icon-xingjiline"></text>
+            </block>
+        </view>
+      </view>
+      <!--附加信息-->
+      <view class="other-msg f12 mt5">
+      <block >
+        <text class="mr10">{{this_dish_info.dish_con_service}}</text>
+        </block>
+      </view>
+
+      <!--价格-->
+      <view class="price f12 mt5">￥{{this_dish_info.dish_pingjunxiaofei||0}}/人</view>
+    </view>
+  </view>
+  <view class="eatpay gridFourCirle" bindtap="zhuanzhang_bind" id="{{this_dish_info.dish_id}}">转账</view>
+  <view class="gonggao">
+   <text>公告:{{this_dish_info.dish_gonggao}}</text>
+  </view>
+</view>
+
+<!--横排列表-->
+<view class="mb10 flex tc order">
+  <view class="sub" bindtap="dish_diancan_bind" id="{{this_dish_info.dish_id}}">
+    <text class="order-item ">{{this_dish_info.dish_diannei_text||'点餐'}}</text>
+  </view>
+  <view class="sub" bindtap="dish_yuding_bind" id="{{this_dish_info.dish_id}}">
+    <text class="order-item ">{{this_dish_info.dish_yuding_text||'预约点餐'}}</text>
+  </view>
+  <view class="sub" bindtap="dish_waimai_bind" id="{{this_dish_info.dish_id}}">
+    <text class="order-item ">{{this_dish_info.dish_waimai_text||'外卖'}}</text>
+  </view>
+</view>
+
+<!--详细列表-->
+<view class="grey detail">
+  <view class="list gridXb flex">
+    <text class="iconfont icon-shop f20"></text><view class="sub ml10">{{this_dish_info.dish_name}}</view></view>
+  <view class="list gridXb flex" bindtap="get_location_bind">
+    <text class="iconfont icon-location f20"></text><view class="sub ml10">{{this_dish_info.dish_quyu}}</view></view>
+  <view class="list gridXb flex" bindtap="call_phone_bind">
+    <text class="iconfont icon-phone f20"></text><view class="sub ml10">手机：{{this_dish_info.dish_con_mobile}} 店铺电话: {{this_dish_info.dish_con_phone}}</view></view>
+  <view class="list gridXb flex">
+    <text class="iconfont icon-time f20"></text><view class="sub ml10">营业时间：{{this_dish_info.dish_open_btime}}点 -- {{this_dish_info.dish_open_etime}}点</view></view>
+
+  <!-- <view class="list gridXb flex">
+     <text class="iconfont icon-yulan f20"></text><view class="sub ml10">门店介绍: {{this_dish_info.dish_jieshao}}</view> 
+  </view> -->
+
+</view>
+<!--商家环境-->
+<view class="environment mb10" wx:if="{{this_dish_info.dish_shijing_arr}}">
+  <view class="title">商家环境</view>
+  <view class="pho-content">
+<block wx:for="{{this_dish_info.dish_shijing_arr}}" wx:for-item="sj_idx">
+    <image class="mr10 mt10" src="{{sj_idx}}" bindtap="img_max_bind" data-url="{{sj_idx}}" mode="aspectFill"></image>
+</block>
+  </view>
+</view>
+<!--商家资质-->
+<view class="environment mb10" wx:if="{{this_dish_info.dish_zizhi}}">
+  <view class="title">商家资质</view>
+  <view class="pho-content">
+  <block  wx:for-item="zz_idx">
+    <image class="mr10 mt10" src="{{this_dish_info.dish_zizhi}}" bindtap="img_max_bind_zz" data-url="{{this_dish_info.dish_zizhi}}" mode="aspectFill"></image>
+    </block>
+  </view>
+</view>
+</block>
+
+</block>

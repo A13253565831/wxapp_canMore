@@ -1,0 +1,310 @@
+<!--pages/restaurant/restaurant-reserve-list/list.wxml-->
+<block wx:if="{{glo_is_load}}">
+    <view class="glo_load_view">
+        <text class="iconfont icon-loading animated infinite rotate mr5"></text><text>正在努力加载</text>
+    </view>
+</block>
+<block wx:else>
+
+  <view class="top-select flex tc mb10">
+  <view class="sub {{this_group_val == '-1' ? 'active':''}}" bindtap="select_status_show" data-val='-1' >预订订单</view>
+  <view class="sub {{this_group_val == '1' ? 'active':''}}" bindtap="select_status_show" data-val='1' >预订订单记录</view>
+</view>
+
+<block wx:if="{{this_group_val == '-1'}}">
+  <block wx:if="{{current_info.cai_list == 'null' || current_info.cai_list == ''}}">
+
+    <view class="no-content tc">
+      <text class="no-content-icon iconfont icon-yemianwuneirong"></text>
+      <view class="no-content-font">暂无订单状态</view>
+    </view>
+
+  </block>
+  <block wx:else>
+
+    <view class="od-box">
+
+    <!--订单明细 start-->
+    <view class="grey od-tit f16">
+      <text class="iconfont icon-cart"></text> 订单明细
+    </view>
+
+    <view class="ord-info_view" >
+      <view class="od-a"  id="{{item.id}}" wx:for="{{current_info.cai_list}}">
+       
+        <view class="caiming">
+          <view class="cai_name">{{item.goods_attr}}</view>
+          <view class="cai_cont">
+           <text class="text">x {{item.goods_num}} </text>
+           <text> ￥{{item.goods_price}} </text>
+          </view>
+        </view>
+
+        
+      </view>
+      
+    <view class="gridXt f16" style="padding:40rpx 0;">
+      <view class="fr">
+        总计
+        <text class="green">￥<text class="f24">{{current_info.totalprice}}</text></text>
+      </view>
+  
+
+    </view>
+
+  </view>
+ </view> 
+  <!--订单明细 end-->
+
+     <!--订单信息 start-->
+  <view class="grey od-tit f16">
+    <text class="iconfont icon-form_light"></text> 订单信息
+  </view>
+  <view class="ord-info" style="padding-bottom:10px;">
+    <view class="od-fan">
+      <view class="flex">
+        <view class="fan-i lineText grey">
+          预订单号码
+        </view>
+        <view class="sub ml15">
+          {{current_info.order_sn}}
+        </view>
+      </view>
+      <view class="flex">
+        <view class="fan-i lineText grey">
+          预订单创建时间
+        </view>
+        <view class="sub ml15">
+          {{current_info.createtime}}
+        </view>
+      </view>
+      <view class="flex">
+        <view class="fan-i lineText grey">
+          预订人
+        </view>
+        <view class="sub ml15">
+          {{current_info.username}}
+        </view>
+      </view>
+      <view class="flex">
+        <view class="fan-i lineText grey">
+          电话
+        </view>
+        <view class="sub ml15">
+          {{current_info.phone}}
+        </view>
+      </view>
+      <view class="flex">
+        <view class="fan-i lineText grey">
+          预约日期时间
+        </view>
+        <view class="sub ml15">
+         {{current_info.yuyuedate}} {{current_info.yuyuetime}}
+        </view>
+      </view>
+      <view class="flex">
+        <view class="fan-i lineText grey">
+          预订人数
+        </view>
+        <view class="sub ml15">
+          {{current_info.usercount}}人
+        </view>
+      </view>
+      <view class="flex">
+        <view class="fan-i lineText grey">
+          备注
+        </view>
+        <view class="sub ml15">
+          {{current_info.remark}}
+        </view>
+      </view>
+      <view class="flex">
+        <view class="fan-i lineText grey">
+          菜品总价格
+        </view>
+        <view class="sub ml15">
+          ￥ {{current_info.totalprice}}
+        </view>
+      </view>
+      <view class="flex">
+        <view class="fan-i lineText grey">
+          预付订金
+        </view>
+        <view class="sub ml15">
+          ￥ {{current_info.price}}
+        </view>
+      </view>
+      <view class="flex">
+        
+        <view class="sub over_flex">
+          
+          <view class="btn_clear" catchtap="backhome" id="{{item.id}}">
+       <button type='primary' disabled="{{disable}}">返回首页</button>
+      </view>
+
+        </view>
+      </view>
+      
+    </view>
+
+      
+  </view>
+
+
+  </block>
+
+</block>
+
+<block wx:if="{{this_group_val == '1'}}">
+  <block wx:if="{{infoList == '' || infoList == 'null'}}">
+    <view class="no-content tc">
+      <text class="no-content-icon iconfont icon-yemianwuneirong"></text>
+      <view class="no-content-font">暂无订单记录</view>
+    </view>
+
+  </block>
+  <block wx:else>
+
+
+    <view wx:for="{{infoList}}" wx:for-item="clasify">
+    
+       <view class="od-box">
+
+    <!--订单明细 start-->
+    <view class="grey od-tit f16">
+      <text class="iconfont icon-cart"></text> 订单明细
+    </view>
+
+    <view class="ord-info_view" >
+      <view class="od-a"  id="{{item.id}}" wx:for="{{clasify.cai_list}}">
+       
+        <view class="caiming">
+          <view class="cai_name">{{item.goods_attr}}</view>
+          <view class="cai_cont">
+           <text class="text">x {{item.goods_num}} </text>
+           <text> ￥{{item.goods_price}} </text>
+          </view>
+        </view>
+
+        
+      </view>
+      
+    <view class="gridXt f16" style="padding:40rpx 0;">
+      <view class="fr">
+        总计
+        <text class="green">￥<text class="f24">{{clasify.totalprice}}</text></text>
+      </view>
+  
+
+    </view>
+
+  </view>
+ </view> 
+  <!--订单明细 end-->
+
+     <!--订单信息 start-->
+  <view class="grey od-tit f16">
+    <text class="iconfont icon-form_light"></text> 订单信息
+  </view>
+  <view class="ord-info" style="padding-bottom:10px;">
+    <view class="od-fan">
+      <view class="flex">
+        <view class="fan-i lineText grey">
+          预订单号码
+        </view>
+        <view class="sub ml15">
+          {{clasify.order_sn}}
+        </view>
+      </view>
+      <view class="flex">
+        <view class="fan-i lineText grey">
+          预订单创建时间
+        </view>
+        <view class="sub ml15">
+          {{clasify.createtime}}
+        </view>
+      </view>
+      <view class="flex">
+        <view class="fan-i lineText grey">
+          预订人
+        </view>
+        <view class="sub ml15">
+          {{clasify.username}}
+        </view>
+      </view>
+      <view class="flex">
+        <view class="fan-i lineText grey">
+          电话
+        </view>
+        <view class="sub ml15">
+          {{clasify.phone}}
+        </view>
+      </view>
+      <view class="flex">
+        <view class="fan-i lineText grey">
+          预约日期时间
+        </view>
+        <view class="sub ml15">
+         {{clasify.yuyuedate}} {{clasify.yuyuetime}}
+        </view>
+      </view>
+      <view class="flex">
+        <view class="fan-i lineText grey">
+          预订人数
+        </view>
+        <view class="sub ml15">
+          {{clasify.usercount}}人
+        </view>
+      </view>
+      <view class="flex">
+        <view class="fan-i lineText grey">
+          备注
+        </view>
+        <view class="sub ml15">
+          {{clasify.remark}}
+        </view>
+      </view>
+      <view class="flex">
+        <view class="fan-i lineText grey">
+          菜品总价格
+        </view>
+        <view class="sub ml15">
+          ￥ {{clasify.totalprice}}
+        </view>
+      </view>
+      <view class="flex">
+        <view class="fan-i lineText grey">
+          预付订金
+        </view>
+        <view class="sub ml15">
+          ￥ {{clasify.price}}
+        </view>
+      </view>
+      <view class="flex">
+        
+        <view class="sub over_flex">
+          
+          <view class="del_view_btn" catchtap="dleList" id="{{clasify.id}}">
+       <button class="button"  disabled="{{disable}}">删除订单</button>
+      </view>
+
+        </view>
+      </view>
+      
+    </view>
+
+      
+  </view>
+    
+    
+    
+    
+    </view>
+
+
+  </block>
+
+</block>
+
+</block>
+

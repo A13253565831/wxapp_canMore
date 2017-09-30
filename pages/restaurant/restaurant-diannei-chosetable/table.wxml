@@ -1,0 +1,63 @@
+<block wx:if="{{glo_isload}}">
+  <view class="glo_load_view">
+        <text class="iconfont icon-loading animated infinite rotate mr5"></text><text>正在努力加载</text>
+    </view>
+</block>
+
+<block wx:else>
+  <block wx:if="{{dish_data.info == '' || dish_data.info =='null'}}">
+    <view class="no-content tc">
+      <text class="no-content-icon iconfont icon-yemianwuneirong"></text>
+      <view class="no-content-font">暂无餐桌信息</view>
+    </view>
+
+  </block>
+
+  <block wx:else>
+
+      <view class="ress-h">
+    <view class="flex ress-h-i">
+      <view class="ress-h-a mr10">
+        <image src="{{dish_data.company.dish_img}}" mode="aspectFill" class="ress-h-av"></image>
+      </view>
+      <view class="sub ress-h-n">
+        <view>
+
+          <view class="f18 lineText">{{dish_data.company.dish_name}}<block wx:if="{{dish_data.company.dish_quyu}}">
+      ({{dish_data.company.dish_quyu}})
+      </block></view>
+
+          <view class="mt5">营业时间：{{dish_data.company.dish_open_btime}}:00 至 {{dish_data.company.dish_open_etime}}:00</view>
+          <view class="xiaofei">
+           <text>人均消费: ￥{{dish_data.company.dish_pingjunxiaofei}}/人</text>
+          </view>
+        </view>
+      </view>
+    </view>
+
+    <view class="flex_gonggao">
+     <view class="gonggao">公告: <text>{{dish_data.company.dish_gonggao}}</text></view>
+     <view class="mendianjieshao">门店介绍: <text>{{dish_data.company.dish_jieshao}}</text></view>
+    </view>
+    
+    <image src="{{dish_data.company.dish_img}}" mode="aspectFill" class="ress-bg"></image>
+  </view> 
+
+  </block>
+
+  <block wx:if="{{dish_data.info}}">
+<view class="choseTable" wx:for="{{dish_data.info}}">
+
+  <view class="table_num">
+
+    <view class="table_num_hao">餐桌号: <text>{{item.table_name}}        </text></view>
+    <view class="table_num_ren"> 人数: <text>{{item.table_renshu}}人</text></view>
+
+  </view>
+
+  <view class="chose_bind {{item.status==3? 'active': ''}}" catchtap = "catchtapView" id="{{item.status}}" data-id="{{item.id}}"><text>{{item.status== '3'? '桌台已支付': '去点餐'}}</text></view>
+</view>
+
+  </block>
+
+</block>

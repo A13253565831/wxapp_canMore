@@ -1,0 +1,62 @@
+<!--pages/user/user_index/user.wxml-->
+
+<block wx:if="{{glo_is_load}}">
+
+  <view class="glo_load_view">
+        <text class="iconfont icon-loading animated infinite rotate mr5"></text><text>正在努力加载</text>
+    </view>
+
+</block>
+
+<block wx:else>
+  <view class="user box">
+
+      <view class="user_bg" >
+        <view class="image"><image src="{{userInfo.avatarUrl}}"></image></view>
+        <text>{{userInfo.nickName}}</text>
+      </view>
+    
+      <view class="flex_one">
+       
+        <view class="user_menu_top">
+        <view class="user_can">
+         <text class="iconfont icon-heart-full-copy"></text>
+         <text>餐饮</text>
+        </view>
+
+         <view class=" menu-item {{isShow== true? 'arrowRJ arrowRv': 'arrowRJ' }}" bindtap="bindShow">
+         <!--iconfont 首先使用再是在font.wxss中引入使用-->
+         <text class="icon-xiangyou iconfont"></text>
+        </view>
+
+        </view>
+
+        <view class="user_menu_bottom" wx:if="{{isShow}}">
+        <!--catchtap="goMyding"-->
+          <view class="waimaiOrder" catchtap='waimaiOrder'>
+           <text class="icon-xiangyou iconfont"></text>
+           <text>外卖订单</text>
+          </view>
+
+          <view class="diancanOrder" catchtap='diancanOrder'>
+           <text class="icon-xiangyou iconfont"></text>
+           <text>点餐记录</text>
+          </view>
+        </view>
+
+      </view>
+
+
+
+  </view>
+
+  
+
+
+<view>
+  <view style="font-size: 28rpx;text-align: center;padding-top:50rpx;">{{yname.errMsg.banquan}}提供技术支持      </view>
+  <view style="font-size: 28rpx;text-align: center;padding-bottom:50rpx;">{{yname.errMsg.url}}</view>
+</view>
+
+
+</block>

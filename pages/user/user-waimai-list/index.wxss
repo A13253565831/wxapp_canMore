@@ -1,0 +1,57 @@
+/* pages/user/user-waimai-list/index.wxss */
+.top-select{background:#fff;}
+.top-select .sub{padding: 20rpx 0;}
+.top-select .active{color: #666;border-bottom: 4rpx solid #666;}
+.tot_cont_for{
+  display: flex;
+  flex-direction: column;
+  background: white;
+  padding: 0 20rpx;
+  margin-top: 10rpx;
+}
+
+.company_nav{
+  /*height: 150rpx;*/
+  border-bottom: 4rpx solid ghostwhite;
+  box-sizing: border-box;
+}
+.company_nav image{
+  width: 100rpx;
+  height: 100rpx;
+  border-radius: 50%;
+  display: inline-block;
+  margin-right: 15rpx;
+  vertical-align: middle;
+  float: left;
+}
+
+.company_nav text{
+  font-size: 30rpx;
+  box-sizing: border-box;
+}
+.list{
+ height: 100rpx;
+ margin-left: 110rpx;
+ padding-top: 15rpx;
+ border-bottom: 4rpx solid ghostwhite;
+ padding-bottom: 15rpx;
+}
+.pay_or{
+  padding-top: 15rpx;
+  padding-bottom: 15rpx;
+  margin-left: 110rpx;
+}
+
+.r-i-b{color: #09bb07;}
+.r-i-b::after{ border-color: #09bb07; color: white;}
+.r-i-b:active{ background: #09bb07; color: white;}
+.r-i-b.red{ color:#e64340;}
+.r-i-b.red::after{ border-color: #e64340; color: white;}
+.r-i-b.red:active{ background: #e64340; color: white;}
+.wid {
+  width: 220rpx;
+  height: 60rpx;
+  text-align: center;
+  line-height: 60rpx;
+  display: inline-block;
+}

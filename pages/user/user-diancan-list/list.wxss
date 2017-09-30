@@ -1,0 +1,60 @@
+/* pages/user/user-diancan-list/list.wxss */
+
+.od-box{
+  padding: 0 20rpx; 
+}
+
+.grey{
+  padding: 10rpx 0;
+}
+
+.ord-info_view{
+  display: flex;
+  flex-direction: column;
+  background: white;
+  height: 280rpx;
+  padding: 10rpx ;
+
+}
+
+.od-a {
+  
+  border-bottom: 4rpx solid ghostwhite;
+}
+.od-a image{
+  width: 80rpx;
+  height: 80rpx;
+  border-radius: 50%;
+}
+
+.ord-info{
+  height: 400rpx;
+  background: white;
+  padding: 10rpx;
+}
+
+.ml15{
+  margin-top: 10rpx;
+}
+.btn_clear{
+  display: inline-block;
+}
+.btn_clear button{
+  display: inline-block;
+  background: ghostwhite;
+  border: 1rpx solid #e64340;
+  color: red;
+  width: 200rpx;
+  height: 60rpx;
+  line-height: 60rpx;
+  font-size: 32rpx;
+}
+
+.over_flex{
+  display: flex;
+  justify-content: space-between;
+  padding-bottom: 10rpx;
+}
+.btn_clear button:active{
+  background: #e64340;
+}

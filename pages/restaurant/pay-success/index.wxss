@@ -1,0 +1,8 @@
+/* pages/pay-success/pay-success.wxss */
+page{background: #fff;}
+.success{padding: 140rpx 0;}
+.money{font-size: 62rpx;}
+.user{padding:0 30rpx;line-height: 60rpx;}
+.user>.flex{padding-top: 20rpx;}
+.user-img{width:50rpx;height: 50rpx;border-radius: 50%;}
+.wancheng{border:1rpx solid #09bb07;width: 375rpx;line-height: 78rpx;border-radius: 6rpx;margin: 260rpx auto 20rpx;}

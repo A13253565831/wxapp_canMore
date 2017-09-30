@@ -1,0 +1,29 @@
+/* pages/test.wxss */
+page checkbox-group label{display: block;}
+checkbox-group scroll-view{max-height: 300rpx;}
+
+.input-group label,.input-group input {line-height: 60rpx;}
+
+.input-group {background: #fff;}
+.input-row {padding: 16rpx 30rpx;}
+
+.input-row textarea {padding: 14rpx 0 0;height: 160rpx;}
+.input-row input {height: 30px;}
+view.input-static {width: 100%;position: absolute;padding-right: 10px;left: 0;}
+.input-row .title{width: 200rpx;max-width: 200rpx;margin-right: 20rpx;line-height: 60rpx;}
+view.input-static picker:not(:first-child) {margin-left: 10rpx;}
+
+view.input-static [mode="date"], view.input-static [mode="date"] {
+  height: 30px;
+  /*text-align: right;*/
+}
+
+view.input-static [mode="date"] {
+  width: 80px;
+  max-width: 80px;
+}
+
+view.input-static [mode="time"] {
+  width: 40px;
+  max-width: 40px;
+}

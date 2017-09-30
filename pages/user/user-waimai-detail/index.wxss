@@ -1,0 +1,40 @@
+/* pages/user/user-waimai-detail/index.wxss */
+/* pages/restaurant/restaurant-order-info/info.wxss */
+
+/*优惠劵、满减信息 */
+.juan{padding-bottom: 10rpx;}
+.juan-list{padding:4rpx 0;line-height: 1.5;}
+.redbg,.greenbg,.orangebg{padding: 2rpx 8rpx;border-radius: 3rpx;}
+.redbg{background: #ea4e52;}
+.greenbg{background: #09bb07;}
+.orangebg{background: #ff9d2b;}
+
+.my-code{ color: #fff; position: relative; padding: 100rpx; overflow: hidden;}
+.my-code::after{background-image: repeating-linear-gradient(45deg,rgba(0,0,0,0),rgba(0,0,0,0) 1.5%,rgba(255,255,255,0.1) 0,rgba(255,255,255,0.1) 3.5%); position: absolute; left: 0; bottom: 0; width:200%; height:10%; display: block; content: "";-webkit-animation: mc linear 6s infinite;animation: mc linear 6s infinite; -webkit-transform: translateX(-50%);transform: translateX(-50%);}
+.my-i{ display: inline-block; margin: 0 20rpx; }
+
+@-webkit-keyframes mc{
+    0%{ -webkit-transform: translateX(-50%);}
+    100%{ -webkit-transform: translateX(0);}
+}
+@keyframes mc{
+    0%{ transform: translateX(-50%);}
+    100%{ transform: translateX(0);}
+}
+.adress{padding:20rpx;padding-left:30rpx;background: #fff;}
+.line{width: 100%;background: linear-gradient(#fff,#fff) padding-box,repeating-linear-gradient(-45deg,#fb8b8b 0,#fb8b8b 12.5%,transparent 0,transparent 25%,#88c3ec 0,#88c3ec 37.5%,transparent 0,transparent 50%) 0 / 160rpx 160rpx;border-top: 6rpx solid transparent;}
+.od-tit{ background: #eee; padding: 30rpx 20rpx 10rpx;}
+.ord-info{ padding: 20rpx 20px 0 50rpx; background: #fff;}
+.od-a-img{ width:80rpx; height: 80rpx; border-radius: 50%;}
+.od-a{ line-height: 80rpx;}
+.fan-r{ width:150rpx; display: -webkit-box; -webkit-box-align: center; -webkit-box-pack:end; text-align: right;}
+.od-fan{ line-height:56rpx; font-size:30rpx; padding: 20rpx 0;}
+
+.od-f{ height:92rpx;}
+.od-f-btn{ position: fixed; left: 0; right: 0; bottom: 0; border-radius: 0;}
+.od-f-btn::after{ display: none;}
+
+.guige{ line-height: 100%;}
+
+@import "/css/DuoguanDish/DuoguanDish-template-default.wxss";
+

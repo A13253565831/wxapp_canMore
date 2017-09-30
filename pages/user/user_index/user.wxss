@@ -1,0 +1,77 @@
+/* pages/user/user_index/user.wxss */
+
+.user box{
+  width: 100%;
+  height: 100%;
+}
+.user {
+  padding: 0 20rpx;
+}
+.user_bg{
+  background: #fff;
+  margin-top: 20rpx;
+  text-align: center;
+  height: 500rpx;
+  line-height: 200rpx;
+}
+
+.image{
+  padding-top: 50rpx;
+  
+}
+.user_bg image{
+  width: 200rpx;
+  height: 200rpx;
+  border-radius: 50%;
+  display: inline-block;
+}
+.flex_one{
+  display: flex;
+  flex-direction: column;
+  margin-top: 20rpx;
+  background: white;
+}
+.user_menu_top{
+  display: flex;
+  justify-content: space-between;
+  height: 100rpx;
+  line-height: 100rpx;
+  border-bottom: 4rpx solid ghostwhite;
+}
+.user_menu_bottom{
+  display: flex;
+  height: 210rpx;
+  flex-direction: column;
+  
+}
+
+.menu-item{
+  font-weight: bold;
+  color:#505050;
+}
+
+.menu-item .iconfont {
+  font-weight: normal;
+  /*必须加,否则scale不生效*/
+  display: inline-block;
+  -webkit-transform: scale(1.5);
+  transform: scale(1.5);
+}
+.arrowRv{
+  transition: .25s;
+  -webkit-transform: translate(-50%) scale(0.9) rotate(90deg);
+  transform: translate(-50%) scale(0.9) rotate(90deg);
+}
+.arrowRJ{
+  transition: .25s;
+}
+
+.waimaiOrder{
+ flex: 1;
+ border-bottom: 4rpx solid ghostwhite;
+ line-height: 105rpx;
+}
+.diancanOrder{
+  flex: 1;
+  line-height: 100rpx;
+}

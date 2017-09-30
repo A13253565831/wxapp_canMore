@@ -1,0 +1,127 @@
+<!--pages/user/user-diancan-list/list.wxml-->
+<block wx:if='{{is_load}}'>
+    <view class="glo_load_view">
+        <text class="iconfont icon-loading animated infinite rotate mr5"></text><text>正在努力加载</text>
+    </view>
+</block>
+
+<block wx:else>
+  
+<block wx:if="{{diancanList == '' || diancanList == null }}">
+
+   <view class="no-content tc">
+      <text class="no-content-icon iconfont icon-yemianwuneirong"></text>
+      <view class="no-content-font">暂无订单状态</view>
+    </view>
+    
+
+    </block>  
+
+    <block wx:else>
+    
+    <view class="od-box" wx:for="{{diancanList}}">
+
+    <!--订单明细 start-->
+    <view class="grey od-tit f16">
+      <text class="iconfont icon-cart"></text> 订单明细
+    </view>
+
+    <view class="ord-info_view">
+      <view class="od-a"  id="{{item.id}}">
+        <image src="{{item.payfans_info.pic}}" mode="aspectFill" class="od-a-img mr10"></image>
+        <text class="f18">{{item.payfans_info.name}}</text>
+
+        <view class="create_time">
+         订单创建时间 {{item.createtime}}
+        </view>
+
+        <view class="end_time">
+         订单结束时间 {{item.endtime}}
+        </view>
+
+      </view>
+      
+    <view class="gridXt f16" style="padding:40rpx 0;">
+      <view class="fr">
+        总计
+        <text class="green">￥<text class="f24">{{item.payprice}}</text></text>
+      </view>
+  
+
+    </view>
+
+  </view>
+  <!--订单明细 end-->
+ 
+  
+  <!--订单信息 start-->
+  <view class="grey od-tit f16">
+    <text class="iconfont icon-form_light"></text> 订单信息
+  </view>
+  <view class="ord-info" style="padding-bottom:10px;">
+    <view class="od-fan">
+      <view class="flex">
+        <view class="fan-i lineText grey">
+          订单号码
+        </view>
+        <view class="sub ml15">
+          {{item.diancan_sn}}
+        </view>
+      </view>
+      <view class="flex">
+        <view class="fan-i lineText grey">
+          支付时间
+        </view>
+        <view class="sub ml15">
+          {{item.paytime}}
+        </view>
+      </view>
+      <view class="flex">
+        <view class="fan-i lineText grey">
+          支付人
+        </view>
+        <view class="sub ml15">
+          {{item.payfans_info.name}}
+        </view>
+      </view>
+      <view class="flex">
+        <view class="fan-i lineText grey">
+          结账桌号
+        </view>
+        <view class="sub ml15">
+          {{item.tableinfo.table_name}}号
+        </view>
+      </view>
+      <view class="flex">
+        <view class="fan-i lineText grey">
+          桌台人数
+        </view>
+        <view class="sub ml15">
+          {{item.tableinfo.table_renshu}}人
+        </view>
+      </view>
+      <view class="flex">
+        <view class="fan-i lineText grey">
+          支付状态
+        </view>
+        <view class="sub over_flex ml15">
+          <text>已结账</text>
+          
+          <view class="btn_clear" catchtap="deletelist" id="{{item.id}}">
+       <button type='primary' disabled="{{disable}}">删除订单</button>
+      </view>
+
+        </view>
+      </view>
+      
+    </view>
+
+      
+  </view>
+  <!--订单信息 end-->
+    
+  </view>
+
+ </block>
+
+</block>

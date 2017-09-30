@@ -1,0 +1,10 @@
+
+/* pages/restaurant/restaurant-reserve/index.wxss */
+.reserve{background:#fff;padding: 0 30rpx;}
+.list{padding: 20rpx 0;}
+/*加减按钮*/
+.num .btn{display: inline-block;width: 40rpx;line-height: 40rpx;border:1rpx solid #eee;border-radius: 6rpx;}
+.num .btn:active{background: #e8e8e8;}
+.ding_msg{background:#fff799;color:#000;padding:2px 5px;}
+
+@import "/css/DuoguanDish/DuoguanDish-template-default.wxss";

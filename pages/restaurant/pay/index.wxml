@@ -1,0 +1,19 @@
+<view class="paybox">
+  <view class="pay">
+    <view class="user-msg tc">
+      <image class="user-img" src="{{this_dish_info.dish_logo}}" mode="aspectFill"></image>
+      <view class="grey mt10">向商家“{{this_dish_info.dish_name}}”支付</view>
+    </view>
+    <form bindsubmit="formSubmit" bindreset="formReset">
+      <view class="pay-money-box">
+        <view class="f16">转账金额</view>
+        <view class="money-box flex">
+          <text class="f20">¥</text><input class="money flex ml10" type="digit" name="money" />
+        </view>
+        <view class="blue mt10" bindtap="change_beizhu_show">添加转账说明</view>
+        <view wx:if="{{is_beizhu_show}}"><input type="text" name="beizhu" class="beizhu" placeholder="最多输入10个字符"/></view>
+        <view class="mt20"><button type="primary" formType="submit" disabled="{{btn_disabled}}" loading="{{submitIsLoading}}">支付</button></view>
+      </view>
+    </form>
+  </view>
+</view>

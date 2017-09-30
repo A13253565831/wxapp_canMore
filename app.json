@@ -1,0 +1,54 @@
+{
+  "extEnable":true,
+  "pages":[
+    "pages/restaurant/restaurant-home/index",
+    "pages/restaurant/restaurant-single/index",
+    "pages/restaurant/pay/index",
+    "pages/restaurant/pay-success/index",
+    "pages/restaurant/restaurant-reserve/index",
+    "pages/restaurant/restaurant-active/index",
+    "pages/restaurant/restaurant-order-list/index",
+    "pages/restaurant/restaurant-order/index",
+    "pages/restaurant/restaurant-addaddress/address",
+    "pages/restaurant/restaurant-addaddress/address/index",
+    "pages/restaurant/restaurant-order-info/info",
+    "pages/restaurant/restaurant-evaluate/evalu",
+    "pages/restaurant/restaurant-diannei-order/index",
+    "pages/restaurant/restaurant-diannei-list/list",
+    "pages/restaurant/restaurant-diannei-evaluate/evaluate",
+    "pages/restaurant/restaurant-diannei-detail/detail",
+    "pages/restaurant/restaurant-diannei-chosetable/table",
+    "pages/restaurant/restaurant-detail-eva/eva",
+    "pages/restaurant/restaurant-planned/planned",
+    "pages/restaurant/restaurant-reserve-detail/detail",
+    "pages/restaurant/restaurant-reserve-list/list",
+    "pages/user/user_index/user",
+    "pages/user/user-waimai-list/index",
+    "pages/user/user-waimai-detail/index",
+    "pages/user/user-diancan-list/list"
+  ],
+  	"tabBar": {
+		"color":"#666",
+		"selectedColor":"#009aff",
+		"backgroundColor":"#fff",
+		"borderStyle":"black",
+		"list": [{
+			  "pagePath": "pages/restaurant/restaurant-home/index",
+			  "text": "点餐",
+			  "iconPath":"images/tabbar/DuoguanDish-template-blue/res.png",
+			  "selectedIconPath":"images/tabbar/DuoguanDish-template-blue/res_in.png"
+			},{
+			  "pagePath": "pages/user/user_index/user",
+			  "text": "我的",
+			  "iconPath":"images/tabbar/DuoguanDish-template-blue/user.png",
+			  "selectedIconPath":"images/tabbar/DuoguanDish-template-blue/user_in.png"
+			}]
+  },
+  "window":{
+    "backgroundTextStyle":"light",
+    "navigationBarBackgroundColor": "#009aff",
+    "navigationBarTitleText": "餐饮",
+    "navigationBarTextStyle":"white",
+    "enablePullDownRefresh": "true"
+  }
+}

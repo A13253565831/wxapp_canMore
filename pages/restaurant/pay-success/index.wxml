@@ -1,0 +1,17 @@
+<!--pages/pay-success/pay-success.wxml-->
+<view class="pay-success">
+  <view class="success tc">
+    <icon type="success" size="64"/>
+    <view class="green f20">支付成功</view>
+    <view class="f20 mt20"><text>¥</text><text class="money ml5">{{order_info.order_money}}</text></view>
+  </view>
+  <view class="user gridXt">
+    <view class="flex">
+    <text>收款方</text><view class="sub tr"><image class="user-img mr10" src="{{order_info.dish_logo}}" mode="aspectFill"></image><text>{{order_info.dish_name}}</text></view>
+    </view>
+    <view class="flex">
+    <text>付款时间</text><view class="sub tr grey"><text>{{order_info.add_time}}</text></view>
+    </view>
+  </view>
+  <view class="wancheng tc green" bindtap="go_dish_home">完成</view>
+</view>

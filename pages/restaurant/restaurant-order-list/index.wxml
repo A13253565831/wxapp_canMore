@@ -1,0 +1,159 @@
+<block wx:if="{{glo_is_load}}">
+    <view class="glo_load_view">
+        <text class="iconfont icon-loading animated infinite rotate mr5"></text><text>正在努力加载</text>
+    </view>
+</block>
+<block wx:else>
+<view class="top-select flex tc mb10">
+  <view class="sub {{this_group_val == '-1' ? 'active':''}}" bindtap="select_status_show" data-val='-1' >待支付</view>
+  <view class="sub {{this_group_val == '1' ? 'active':''}}" bindtap="select_status_show" data-val='1' >待确认</view>
+ <view class="sub {{this_group_val == '2' ? 'active':''}}" bindtap="select_status_show" data-val='2' >待评价</view>
+  <view class="sub {{this_group_val == '3' ? 'active':''}}" bindtap="select_status_show" data-val='3' >已完成</view>
+</view>
+<block wx:if="{{postlist == null}}">
+<!--暂无内容提示 start-->
+<view class="no-content tc">
+    <text class="no-content-icon iconfont icon-yemianwuneirong"></text>
+    <view class="no-content-font">暂无订单信息</view>
+</view>
+<!--暂无内容提示 end-->
+</block>
+<block wx:else>
+<view class="r-o">
+
+<block wx:if="{{this_group_val == -1}}">
+<block wx:for="{{postlist.no_pay}}" >
+    <view class="ro-item gridXb flex">
+        <view class="r-logo" bindtap="user_orderinfo_bind" data-ordersn="{{item.order_sn}}" id="{{item.id}}">
+            <image src="{{item.dish_img}}" class="r-logo-img" mode="aspectFill"></image>
+        </view>
+        <view class="r-info sub">
+            <view class="lineText r-i-name" bindtap="user_orderinfo_bind" data-ordersn="{{item.order_sn}}" id="{{item.id}}">
+                <text class="fr">{{item.order_status_txt}}</text>
+                <text class="f18 r-i-n">{{item.dish_name}}（{{item.dish_quyu}}）</text>
+            </view>
+            <view class="f14 grey mt5" bindtap="user_orderinfo_bind" data-ordersn="{{item.order_sn}}" id="{{item.id}}">
+                <view>下单时间：{{item.createtime}}</view>
+                <view>总价：￥{{item.order_price}}</view>
+            </view>
+            <view class="tr r-info-b">
+                <block wx:if="{{item.order_action.cancel}}">
+                    <button type="default" class="r-i-b mr10 red" bindtap="delete_user_order" data-ordersn="{{item.order_sn}}" id="{{item.id}}">取消</button>
+                </block>
+                <block wx:if="{{item.order_action.pay}}">
+                    <button type="default" class="r-i-b mr10" bindtap="order_go_pay_bind" data-ordersn="{{item.order_sn}}" id="{{item.id}}" loading="{{submitIsLoading}}" disabled="{{buttonIsDisabled}}">支付</button>
+                </block>
+                <block wx:if="{{item.order_action.comment}}">
+                    <button type="default" class="r-i-b mr10" bindtap="order_go_comment_bind" id="{{item.id}}">待评价</button>
+                </block>
+                <block wx:if="{{item.order_action.yes_comment}}">
+                    <button type="default" class="r-i-b mr10 red">已评价</button>
+                </block>
+            </view>
+        </view>
+    </view>
+</block>
+</block>
+
+<block wx:if="{{this_group_val == 1}}">
+
+<block wx:for="{{postlist.no_confirm}}" >
+    <view class="ro-item gridXb flex">
+        <view class="r-logo" bindtap="user_orderinfo_bind" data-ordersn="{{item.order_sn}}" id="{{item.id}}">
+            <image src="{{item.dish_img}}" class="r-logo-img" mode="aspectFill"></image>
+        </view>
+        <view class="r-info sub">
+            <view class="lineText r-i-name" bindtap="user_orderinfo_bind" data-ordersn="{{item.order_sn}}" id="{{item.id}}">
+                <text class="fr">{{item.order_status_txt}}</text>
+                <text class="f18 r-i-n">{{item.dish_name}}（{{item.dish_quyu}}）</text>
+            </view>
+            <view class="f14 grey mt5" bindtap="user_orderinfo_bind" data-ordersn="{{item.order_sn}}" id="{{item.id}}">
+                <view>下单时间：{{item.createtime}}</view>
+                <view>总价：￥{{item.order_price}}</view>
+            </view>
+            <view class="tr r-info-b">
+                
+                <block>
+                    <button type="default" class="r-i-b mr10" bindtap="order_go_confirm" data-ordersn="{{item.order_sn}}" id="{{item.id}}" loading="{{submitIsLoading}}" disabled="{{buttonIsDisabled}}">确认收货</button>
+                </block>
+                
+            </view>
+        </view>
+    </view>
+</block>
+
+</block>
+
+
+<block wx:if="{{this_group_val == 2}}">
+
+<block wx:for="{{postlist.evaluate}}" >
+    <view class="ro-item gridXb flex">
+        <view class="r-logo" bindtap="user_orderinfo_bind" data-ordersn="{{item.order_sn}}" id="{{item.id}}">
+            <image src="{{item.dish_img}}" class="r-logo-img" mode="aspectFill"></image>
+        </view>
+        <view class="r-info sub">
+            <view class="lineText r-i-name" bindtap="user_orderinfo_bind" data-ordersn="{{item.order_sn}}" id="{{item.id}}">
+                <text class="fr">{{item.order_status_txt}}</text>
+                <text class="f18 r-i-n">{{item.dish_name}}（{{item.dish_quyu}}）</text>
+            </view>
+            <view class="f14 grey mt5" bindtap="user_orderinfo_bind" data-ordersn="{{item.order_sn}}" id="{{item.id}}">
+                <view>下单时间：{{item.createtime}}</view>
+                <view>总价：￥{{item.order_price}}</view>
+            </view>
+            <view class="tr r-info-b">
+                
+               <block wx:if="{{item.order_action.cancel}}">
+                    <button type="default" class="r-i-b mr10 red" bindtap="delete_user_order" data-ordersn="{{item.order_sn}}" id="{{item.id}}">删除订单</button>
+                </block>
+
+                <block>
+                    <button type="default" class="r-i-b mr10" bindtap="order_go_evaluate" data-ordersn="{{item.order_sn}}" id="{{item.id}}" loading="{{submitIsLoading}}" disabled="{{buttonIsDisabled}}">待评价</button>
+                </block>
+                
+            </view>
+        </view>
+    </view>
+</block>
+
+</block>
+
+
+
+
+<block wx:if="{{this_group_val == 3}}">
+
+  <block wx:for="{{postlist.finished}}" >
+    <view class="ro-item gridXb flex">
+        <view class="r-logo" bindtap="user_orderinfo_bind" data-ordersn="{{item.order_sn}}" id="{{item.id}}">
+            <image src="{{item.dish_img}}" class="r-logo-img" mode="aspectFill"></image>
+        </view>
+        <view class="r-info sub">
+            <view class="lineText r-i-name" bindtap="user_orderinfo_bind" data-ordersn="{{item.order_sn}}" id="{{item.id}}">
+                <text class="fr">{{item.order_status_txt}}</text>
+                <text class="f18 r-i-n">{{item.dish_name}}（{{item.dish_quyu}}）</text>
+            </view>
+            <view class="f14 grey mt5" bindtap="user_orderinfo_bind" data-ordersn="{{item.order_sn}}" id="{{item.id}}">
+                <view>下单时间：{{item.createtime}}</view>
+                <view>总价：￥{{item.order_price}}</view>
+            </view>
+            
+            <view class="tr r-info-b">
+                <block wx:if="{{item.order_action.cancel}}">
+                    <button type="default" class="r-i-b mr10 red" bindtap="delete_user_order" data-ordersn="{{item.order_sn}}" id="{{item.id}}">删除订单</button>
+                </block>
+              </view>
+        </view>
+    </view>
+</block>
+
+</block>
+
+<view class="m20 tc grey loading" wx:if="{{showLoading}}">
+    <text class="iconfont icon-loading animated infinite rotate mr5"></text><text>正在加载...</text>
+</view>
+</view>
+</block>
+</block>
+
+

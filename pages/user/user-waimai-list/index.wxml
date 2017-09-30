@@ -1,0 +1,194 @@
+<!--pages/user/user-waimai-list/index.wxml-->
+<block wx:if="{{that_load}}">
+ <view class="glo_load_view">
+        <text class="iconfont icon-loading animated infinite rotate mr5"></text><text>正在努力加载</text>
+    </view>
+
+</block>
+
+<block wx:else>
+
+  <view class="top-select flex tc mb10">
+  <view class="sub {{this_group_val == '-1' ? 'active':''}}" bindtap="select_status_show" data-val='-1' >待支付</view>
+  <view class="sub {{this_group_val == '1' ? 'active':''}}" bindtap="select_status_show" data-val='1' >待确认</view>
+ <view class="sub {{this_group_val == '2' ? 'active':''}}" bindtap="select_status_show" data-val='2' >待评价</view>
+  <view class="sub {{this_group_val == '3' ? 'active':''}}" bindtap="select_status_show" data-val='3' >已完成</view>
+</view>
+
+
+
+  <block wx:if='{{paylist == "" || paylist == null}}'>
+    <view class="no-content tc">
+    <text class="no-content-icon iconfont icon-yemianwuneirong"></text>
+    <view class="no-content-font">暂无订单信息</view>
+</view>
+
+  </block>
+
+  <block wx:else>
+
+      <view wx:if="{{this_group_val == -1}}">
+      
+        <view class="tot_cont_for" wx:for="{{paylist.orderList.no_pay}}" bindtap="catchDetail" data-ordersn="{{item.order_sn}}">
+        
+          <view class="company_nav">
+           <image src="{{item.dish_img}}"></image>
+           <text>{{item.dish_name}} ({{item.dish_quyu}}) </text>
+           <text>{{item.order_status_txt}}</text>
+          </view>
+
+          <view class="list">
+
+          <view class="list_time">
+           <text>下单时间:{{item.createtime}}</text>
+          </view>
+
+          <view class="list_total">
+           <text>总价:{{item.order_price}}</text>
+          </view> 
+
+          </view>
+
+          <view class="pay_or">
+
+              <block wx:if="{{item.order_action.cancel}}">
+                    <button type="default" class="r-i-b wid mr10 red" catchtap="delete_user_order" data-ordersn="{{item.order_sn}}" id="{{item.id}}">取消</button>
+                </block>
+                <block wx:if="{{item.order_action.pay}}">
+                    <button type="default" class="r-i-b wid mr10" catchtap="order_go_pay_bind" data-ordersn="{{item.order_sn}}" id="{{item.id}}" loading="{{submitIsLoading}}" disabled="{{buttonIsDisabled}}">支付</button>
+                </block>
+
+          
+          </view>  
+        
+        
+        
+        </view>
+      
+      
+      </view>
+
+
+      <view wx:if="{{this_group_val == 1}}">
+      
+        <view class="tot_cont_for" wx:for="{{paylist.orderList.no_confirm}}" bindtap="catchDetail" data-ordersn="{{item.order_sn}}">
+        
+          <view class="company_nav">
+           <image src="{{item.dish_img}}"></image>
+           <text>{{item.dish_name}} ({{item.dish_quyu}}) </text>
+           <text>{{item.order_status_txt}}</text>
+          </view>
+
+          <view class="list">
+
+          <view class="list_time">
+           <text>下单时间:{{item.createtime}}</text>
+          </view>
+
+          <view class="list_total">
+           <text>总价:{{item.order_price}}</text>
+          </view> 
+
+          </view>
+
+          <view class="pay_or">
+
+              
+                <block wx:if="{{item.order_action.pay}}">
+                    <button type="default" class="r-i-b wid mr10" catchtap="order_go_confirm" data-ordersn="{{item.order_sn}}" id="{{item.id}}" loading="{{submitIsLoading}}" disabled="{{buttonIsDisabled}}">确认收货</button>
+                </block>
+
+          
+          </view>  
+        
+        
+        
+        </view>
+      
+      
+      </view>
+
+      <view wx:if="{{this_group_val == 2}}">
+      
+        <view class="tot_cont_for" wx:for="{{paylist.orderList.evaluate}}" bindtap="catchDetail" data-ordersn="{{item.order_sn}}">
+        
+          <view class="company_nav">
+           <image src="{{item.dish_img}}"></image>
+           <text>{{item.dish_name}} ({{item.dish_quyu}}) </text>
+           <text>{{item.order_status_txt}}</text>
+          </view>
+
+          <view class="list">
+
+          <view class="list_time">
+           <text>下单时间:{{item.createtime}}</text>
+          </view>
+
+          <view class="list_total">
+           <text>总价:{{item.order_price}}</text>
+          </view> 
+
+          </view>
+
+          <view class="pay_or">
+
+              <block wx:if="{{item.order_action.cancel}}">
+                    <button type="default" class="r-i-b wid mr10 red" catchtap="delete_user_order" data-ordersn="{{item.order_sn}}" id="{{item.id}}">删除订单</button>
+                </block>
+                <block wx:if="{{item.order_action.pay}}">
+                    <button type="default" class="r-i-b wid mr10" catchtap="order_go_evaluate" data-ordersn="{{item.order_sn}}" id="{{item.id}}" loading="{{submitIsLoading}}" disabled="{{buttonIsDisabled}}">待评价</button>
+                </block>
+
+          
+          </view>  
+        
+        
+        
+        </view>
+      
+      
+      </view>  
+
+
+      <view wx:if="{{this_group_val == 3}}">
+      
+        <view class="tot_cont_for" wx:for="{{paylist.orderList.finished}}" bindtap="catchDetail" data-ordersn="{{item.order_sn}}">
+        
+          <view class="company_nav">
+           <image src="{{item.dish_img}}"></image>
+           <text>{{item.dish_name}} ({{item.dish_quyu}}) </text>
+           <text>{{item.order_status_txt}}</text>
+          </view>
+
+          <view class="list">
+
+          <view class="list_time">
+           <text>下单时间:{{item.createtime}}</text>
+          </view>
+
+          <view class="list_total">
+           <text>总价:{{item.order_price}}</text>
+          </view> 
+
+          </view>
+
+          <view class="pay_or">
+
+              <block wx:if="{{item.order_action.cancel}}">
+                    <button type="default" class="r-i-b wid mr10 red" catchtap="delete_user_order" data-ordersn="{{item.order_sn}}" id="{{item.id}}">删除订单</button>
+                </block>
+                
+          
+          </view>  
+        
+        
+        
+        </view>
+      
+      
+      </view>
+
+
+
+  </block> 
+</block>

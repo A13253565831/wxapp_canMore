@@ -1,0 +1,273 @@
+<!--pages/restaurant/restaurant-diannei-list/list.wxml-->
+<view class="box">
+
+<block wx:if="{{glo_is_load}}">
+    <view class="glo_load_view">
+        <text class="iconfont icon-loading animated infinite rotate mr5"></text><text>正在努力加载</text>
+    </view>
+</block>
+
+<block wx:else>
+
+ <view class="top-select flex tc mb10">
+  <view class="sub {{this_group_val == '-1' ? 'active':''}}" bindtap="select_status_show" data-val='-1' >您的订单</view>
+  <view class="sub {{this_group_val == '1' ? 'active':''}}" bindtap="select_status_show" data-val='1' >待评价</view>
+ <view class="sub {{this_group_val == '2' ? 'active':''}}" bindtap="select_status_show" data-val='2' >已评价</view>
+
+</view> 
+
+    <block wx:if="{{this_group_val == -1}}">
+
+    <block wx:if="{{oinfo == 'diancansn is missing' }}">
+
+   <view class="no-content tc">
+      <text class="no-content-icon iconfont icon-yemianwuneirong"></text>
+      <view class="no-content-font">暂无订单状态</view>
+    </view>
+    
+
+    </block>  
+
+    <block wx:else>
+    
+    <view class="od-box">
+
+    <!--订单明细 start-->
+    <view class="grey od-tit f16">
+      <text class="iconfont icon-cart"></text> 订单明细
+    </view>
+    <view class="ord-info">
+      <view class="od-a arrowR" bindtap="go_dish_info_bind" id="{{oinfo.id}}">
+        <image src="{{oinfo.payfans_info.pic}}" mode="aspectFill" class="od-a-img mr10"></image>
+        <text class="f18">{{oinfo.payfans_info.name}}</text>
+      </view>
+      
+
+      <view class="od-fan gridXt" wx:if="{{oinfo.order_type == 2}}">
+      <!--<view class="flex">
+                <view class="sub fan-n lineText">
+                    餐盒费
+                </view>
+                <view class="fan-r">
+                    +￥{{oinfo.dabao_fee}}
+                </view>
+            </view>
+            <view class="flex">
+                <view class="sub fan-n lineText">
+                    配送费
+                </view>
+                <view class="fan-r">
+                    +￥{{oinfo.shipping_fee}}
+                </view>
+            </view>-->
+        </view>
+
+
+        <!--<view class="od-fan gridXt">
+            <view class="flex">
+                <view class="sub fan-n lineText">
+                    满减优惠
+                </view>
+                <view class="fan-r">
+                    -￥20
+                </view>
+            </view>
+            <view class="flex">
+                <view class="sub fan-n lineText">
+                    门店新客立减
+                </view>
+                <view class="fan-r">
+                    -￥20
+                </view>
+            </view>
+        </view>-->
+      <view class="mt5 f12 juan">
+        <view class="juan-list flex" wx:if="{{oinfo.huodong_shou_jiner > 0}}">
+          <text class="greenbg write mr5">新</text>
+          <text class="grey sub">新用户立减</text>
+          <text class="red">-￥{{oinfo.huodong_shou_jiner}}</text>
+        </view>
+        <view class="juan-list flex" wx:if="{{oinfo.huodong_quan_jiner > 0}}">
+          <text class="redbg write mr5">劵</text>
+          <text class="grey sub">代金券</text>
+          <text class="red">-￥{{oinfo.huodong_quan_jiner}}</text>
+        </view>
+        <view class="juan-list flex" wx:if="{{oinfo.huodong_manjin_jiner > 0}}">
+          <text class="orangebg write mr5">减</text>
+          <text class="grey sub">满减</text>
+          <text class="red">-￥{{oinfo.huodong_manjin_jiner}}</text>
+        </view>
+      </view>
+    <view class="gridXt f16" style="padding:40rpx 0;">
+      <view class="fr">
+        总计
+        <text class="green">￥<text class="f24">{{oinfo.payprice}}</text></text>
+      </view>
+      <view class="grey">
+        <text class="mr10"></text>
+        <text></text>
+      </view>
+    </view>
+
+  </view>
+  <!--订单明细 end-->
+ 
+  
+  <!--订单信息 start-->
+  <view class="grey od-tit f16">
+    <text class="iconfont icon-form_light"></text> 订单信息
+  </view>
+  <view class="ord-info" style="padding-bottom:10px;">
+    <view class="od-fan">
+      <view class="flex">
+        <view class="fan-i lineText grey">
+          订单号码
+        </view>
+        <view class="sub ml15">
+          {{oinfo.diancan_sn}}
+        </view>
+      </view>
+      <view class="flex">
+        <view class="fan-i lineText grey">
+          支付时间
+        </view>
+        <view class="sub ml15">
+          {{oinfo.paytime}}
+        </view>
+      </view>
+      <view class="flex">
+        <view class="fan-i lineText grey">
+          支付人
+        </view>
+        <view class="sub ml15">
+          {{oinfo.payfans_info.name}}
+        </view>
+      </view>
+      <view class="flex">
+        <view class="fan-i lineText grey">
+          结账桌号
+        </view>
+        <view class="sub ml15">
+          {{oinfo.table_name}}号
+        </view>
+      </view>
+      <view class="flex">
+        <view class="fan-i lineText grey">
+          支付状态
+        </view>
+        <view class="sub ml15">
+          {{oinfo.pay_status_txt}}
+        </view>
+      </view>
+      
+    </view>
+  </view>
+  <!--订单信息 end-->
+  </view>
+
+  <view class="od-f">
+    <button type="primary" hover-class="none" class="od-f-btn" bindtap="go_dish_info_bind" id="{{oinfo.dish_id}}">返回门店</button>
+  </view>
+    
+    </block>
+
+ </block>
+
+</block>
+
+<block wx:if="{{this_group_val == 1}}">
+
+  <block wx:if="{{oinfo.dishlist.weipingjia==''||oinfo.dishlist.weipingjia == null|| oninfo.dishlist.weipingjia == 'undefined'}}">
+    <view class="no-content tc">
+      <text class="no-content-icon iconfont icon-yemianwuneirong"></text>
+      <view class="no-content-font">暂无待评价菜品</view>
+    </view>
+  </block>
+
+  <block wx:else>
+
+    <view class="cai_for" wx:for="{{oinfo.dishlist.weipingjia}}">
+     
+     <view class="cai_name">
+       <view class="left">
+        <image src="{{item.image}}"></image>
+        <text> {{item.name}} </text>
+         
+
+       </view>
+       <view class="right">
+         <text> 数量 x {{item.dish_num}} </text>
+        <text> 小计 ￥ {{item.sum_price}}</text>
+       </view>
+     </view>
+     <view class="pingjia">
+     <button class="ping" type="primary" data-id="{{item.id}}" data-oid="{{item.dcid}}" catchtap="goToevaluate"   disabled ="{{disable}}">评价菜品</button>
+<!--     
+     <button  data-id="{{item.id}}" catchtap="del_ping" class="del_btn_one">删除评价</button>-->
+
+     </view>
+
+    </view>
+
+    <view class="del_bottom">
+      
+    <view class="del_left">
+      <text>支付时间 {{oinfo.paytime}} </text>
+      
+      <view class="font_color"> 总价格 ￥ {{oinfo.payprice}}</view>
+    </view>
+
+     
+    </view>
+    
+  </block>
+
+</block>
+
+<block wx:if="{{this_group_val == 2}}">
+
+  <block wx:if="{{oinfo.dishlist.yipingjia==''||oinfo.dishlist.yipingjia == null|| oninfo.dishlist.yipingjia == 'undefined'}}">
+    <view class="no-content tc">
+      <text class="no-content-icon iconfont icon-yemianwuneirong"></text>
+      <view class="no-content-font">暂无已评价菜品</view>
+    </view>
+  </block>
+
+  <block wx:else>
+<!--未评价和已评价绑定数据不一样的-->
+    <view class="cai_for" wx:for="{{oinfo.dishlist.yipingjia}}">
+     
+     <view class="cai_name">
+       <view class="left">
+        <image src="{{item.image}}"></image>
+        <text> {{item.name}} </text>
+         
+       </view>
+       <view class="right">
+         <text> 数量 x {{item.dish_num}} </text>
+        <text> 小计 ￥ {{item.sum_price}}</text>
+       </view>
+     </view>
+     
+     
+
+    </view>
+    
+    <view class="del_pingjia">
+
+     <button type="primary" class="del_btn" catchtap="bindgohome" disabled ="{{disable}}">返回首页</button>
+
+     </view>
+
+  </block>
+  <view class="m20 tc grey loading" wx:if="{{showLoading}}">
+    <text class="iconfont icon-loading animated infinite rotate mr5"></text><text>正在加载...</text>
+</view>
+
+
+</block>
+
+
+
+</view>
+

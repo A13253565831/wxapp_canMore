@@ -1,0 +1,61 @@
+/* pages/restaurant/restaurant-cart/index.wxss */
+/*添加地址*/
+.addadress,.adress{padding:20rpx;padding-left:30rpx;background: #fff;}
+.line{width: 100%;background: linear-gradient(#fff,#fff) padding-box,repeating-linear-gradient(-45deg,#fb8b8b 0,#fb8b8b 12.5%,transparent 0,transparent 25%,#88c3ec 0,#88c3ec 37.5%,transparent 0,transparent 50%) 0 / 160rpx 160rpx;border-top: 6rpx solid transparent;}
+.ress-c{ background: #fff;}
+.ress-c-i{ padding:30rpx 20rpx 30rpx 0; margin-left: 30rpx; width: auto;}
+.ress-cl{ width: 50%;}
+.ress-cr,.ress-cc{ margin-left: 20rpx; display: -webkit-box; -webkit-box-align:center;}
+
+.ress-c-b{ height: 100rpx;}
+.ress-float{ height: 100rpx; background: #fff; position: fixed; left: 0; right: 0; bottom: 0; z-index: 1000;}
+.float-price{ padding: 0 30rpx; line-height: 100rpx;}
+.float-btn-s{ border-radius: 0; width: 240rpx; height: 100rpx; line-height: 100rpx;}
+/*.float-btn-s::after{ display: none;}*/
+
+.ress-name{ white-space: nowrap;  line-height: 40rpx;}
+.ress-c-tt{ height:80rpx; line-height: 40rpx; width:100%;}
+.choose-zhuohao{padding-right:50rpx;}
+
+.ress-tag-box{padding:10rpx 20rpx 0;}
+.ress-tag{line-height: 24px;padding: 0 24rpx; background: rgba(255, 255, 255, 0.5); vertical-align:bottom; font-size:12px;display: inline-block;max-width: 700rpx;}
+.ress-tag::before{border-color: #ccc;}
+.ress-tag:active{background: #fff;border-radius:30px;}
+
+
+
+/*劵*/
+.juan-list{padding:4rpx 20rpx 4rpx 30rpx;line-height: 1.5;}
+.redbg,.greenbg,.orangebg{padding: 2rpx 8rpx;border-radius: 3rpx;}
+.redbg{background: #e44e43;}
+.greenbg{background: #09bb07;}
+.orangebg{background: #f90;}
+
+
+/*.zhuohao{ z-index: 100;}*/
+/*.zh-box{ background: #fff; z-index: 101; max-height: 60%; position: absolute;left: 0; bottom: 0; width: 100%;overflow-y: auto;-webkit-overflow-scolling:touch;}*/
+.zh-title-box{height: 42px;}
+.zh-title{width: 100%;padding:20rpx;position: fixed;background: #fff;z-index: 66;}
+.zh-list{ padding:20rpx 30rpx;width: 50%;display: inline-block;box-sizing: border-box;}
+.zh-list radio{ margin-right:20rpx; -webkit-transform: scale(0.8);transform: scale(0.8);}
+
+
+/*.daijinjuan{width: 100%;max-height: 60%;background: #f5f5f5;position: fixed;bottom: 0;overflow-y:auto;z-index: 66;}*/
+.nonsue{margin: 20rpx auto;line-height: 80rpx;}
+
+.canuse,.notuse{padding-top: 30rpx;}
+.canuse-title{padding: 0 0 10rpx 40rpx;}
+.dollar-item{width: 690rpx;background: #fff;margin: 0 auto 20rpx;border-radius: 10rpx;overflow: hidden;}
+.dollar-item .top{padding: 50rpx 50rpx 0;background: #f66;height: 160rpx;border-bottom: 2rpx dashed #fff;}
+.money-msg , .status{display: inline-block;}
+.money{font-size: 80rpx;}
+.status{line-height: 60rpx; border-radius: 4rpx;}
+.status-usebtn{line-height: 30px;height: 30px; border-radius: 4rpx;border: 1px solid #f66;color: #f66; padding:0 26rpx;font-size: 14px;}
+.status-usebtn:active{background: rgba(255, 102, 102, 0.2)}
+.bottom{padding:30rpx;line-height: 50rpx;}
+/*不可用代金劵 样式*/
+.not_use .top{background: #bbb;}
+.not_use .status-usebtn{border-color:  #ddd;color: #999;}
+.not_use .status-usebtn:active{background: rgba(0, 0, 0, 0)}
+
+page .wx-radio-input-checked{background: #09bb07 !important;border-color: #09bb07 !important;}

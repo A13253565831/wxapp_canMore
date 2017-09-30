@@ -1,0 +1,199 @@
+<!--pages/restaurant/restaurant-detail-eva/eva.wxml-->
+<block wx:if="{{glo_is_load}}">
+    <view class="glo_load_view">
+        <text class="iconfont icon-loading animated infinite rotate mr5"></text><text>正在努力加载</text>
+    </view>
+</block>
+
+<block wx:else>
+
+    <block wx:if="{{pingjia.pingjia_level_2 == 'null'}}">
+      <view class="no-content tc">
+      <text class="no-content-icon iconfont icon-yemianwuneirong"></text>
+      <view class="no-content-font">暂无评价信息</view>
+    </view>
+
+    </block>
+
+    <block wx:else>
+
+    
+      <block wx:if="{{id == 2}}">
+
+        <view class="pj_person" wx:for="{{pingjia.pingjia_level_2}}">
+      <view class="pj_box">
+      <view class="pj_person_name">
+       <image src="{{item.fans_img}}"></image> 
+       <text> {{item.fans_name}} </text>
+       <text class="text"> {{item.level}} </text>
+      </view>
+     
+
+      <view class="pj_cont">
+        <text>{{item.info}}</text>         
+      </view>
+      <view class="pj_time">
+      <text>{{item.createtime}}</text>
+      </view>
+
+      </view>
+    </view>
+
+      </block>
+
+
+    </block>
+
+
+    <block wx:if="{{pingjia.pingjia_level_1 == 'null'}}">
+      <view class="no-content tc">
+      <text class="no-content-icon iconfont icon-yemianwuneirong"></text>
+      <view class="no-content-font">暂无评价信息</view>
+    </view>
+
+    </block>
+
+    <block wx:else>
+
+    
+      <block wx:if="{{id == 1}}">
+
+        <view class="pj_person" wx:for="{{pingjia.pingjia_level_1}}">
+      <view class="pj_box">
+      <view class="pj_person_name">
+       <image src="{{item.fans_img}}"></image> 
+       <text> {{item.fans_name}} </text>
+       <text class="text"> {{item.level}} </text>
+      </view>
+     
+
+      <view class="pj_cont">
+        <text>{{item.info}}</text>         
+      </view>
+      <view class="pj_time">
+      <text>{{item.createtime}}</text>
+      </view>
+
+      </view>
+    </view>
+
+      </block>
+
+
+    </block>
+
+
+    <block wx:if="{{pingjia.pingjia_level_2 == 'null'}}">
+      <view class="no-content tc">
+      <text class="no-content-icon iconfont icon-yemianwuneirong"></text>
+      <view class="no-content-font">暂无评价信息</view>
+    </view>
+
+    </block>
+
+    <block wx:else>
+
+    
+      <block wx:if="{{id == 'undefined'}}">
+
+        <view class="pj_person" wx:for="{{pingjia.pingjia_all}}">
+      <view class="pj_box">
+      <view class="pj_person_name">
+       <image src="{{item.fans_img}}"></image> 
+       <text> {{item.fans_name}} </text>
+       <text class="text"> {{item.level}} </text>
+      </view>
+     
+
+      <view class="pj_cont">
+        <text>{{item.info}}</text>         
+      </view>
+      <view class="pj_time">
+      <text>{{item.createtime}}</text>
+      </view>
+
+      </view>
+    </view>
+
+      </block>
+
+    </block>
+
+
+    
+    <block wx:if="{{pingjia.pingjia_level_3 == 'null'}}">
+      <view class="no-content tc">
+      <text class="no-content-icon iconfont icon-yemianwuneirong"></text>
+      <view class="no-content-font">暂无评价信息</view>
+    </view>
+
+    </block>
+
+    <block wx:else>
+
+    
+      <block wx:if="{{id == '3'}}">
+
+        <view class="pj_person" wx:for="{{pingjia.pingjia_level_3}}">
+      <view class="pj_box">
+      <view class="pj_person_name">
+       <image src="{{item.fans_img}}"></image> 
+       <text> {{item.fans_name}} </text>
+       <text class="text"> {{item.level}} </text>
+      </view>
+     
+
+      <view class="pj_cont">
+        <text>{{item.info}}</text>         
+      </view>
+      <view class="pj_time">
+      <text>{{item.createtime}}</text>
+      </view>
+
+      </view>
+    </view>
+
+      </block>
+
+    </block>
+
+
+    <block wx:if="{{pingjia.pingjia_level_3 == 'null'}}">
+      <view class="no-content tc">
+      <text class="no-content-icon iconfont icon-yemianwuneirong"></text>
+      <view class="no-content-font">暂无评价信息</view>
+    </view>
+
+    </block>
+
+    <block wx:else>
+
+    
+      <block wx:if="{{id == '4'}}">
+
+        <view class="pj_person" wx:for="{{pingjia.pingjia_level_4}}">
+      <view class="pj_box">
+      <view class="pj_person_name">
+       <image src="{{item.fans_img}}"></image> 
+       <text> {{item.fans_name}} </text>
+       <text class="text"> {{item.level}} </text>
+      </view>
+     
+
+      <view class="pj_cont">
+        <text>{{item.info}}</text>         
+      </view>
+      <view class="pj_time">
+      <text>{{item.createtime}}</text>
+      </view>
+
+      </view>
+    </view>
+
+      </block>
+
+    </block>
+
+
+
+</block>

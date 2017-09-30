@@ -1,0 +1,192 @@
+/* pages/restaurant/restaurant-diannei-list/list.wxss */
+
+.box{
+  padding: 0 20rpx;
+}
+.list_view{
+  display: flex;
+  padding: 20rpx 0;
+  justify-content: space-between;
+
+}
+.sub {
+  width: 50%;
+  text-align: center;
+  height: 70rpx;
+  padding: 10rpx 0;
+}
+
+.active {
+  color: #009AFF;
+  border-bottom: 4rpx solid #009AFF;
+}
+.res-active{
+  width: 50%;
+  height: 70rpx;
+  color: #009AFF;
+  border-bottom: 1rpx solid #009AFF;
+}
+
+
+.r-i-b{ display:inline-block; vertical-align: bottom; background: #fff; line-height:inherit; font-size:28rpx; }
+.r-i-b:active{color: #fff;}
+.r-i-n{font-weight: 600;}
+
+.r-i-b{color: #09bb07;}
+.r-i-b::after{ border-color: #09bb07;}
+.r-i-b:active{ background: #09bb07;}
+.r-i-b.red{ color:#e64340;}
+.r-i-b.red::after{ border-color: #e64340;}
+.r-i-b.red:active{ background: #e64340;}
+
+
+/*优惠劵、满减信息 */
+.juan{padding-bottom: 10rpx;}
+.juan-list{padding:4rpx 0;line-height: 1.5;}
+.redbg,.greenbg,.orangebg{padding: 2rpx 8rpx;border-radius: 3rpx;}
+.redbg{background: #ea4e52;}
+.greenbg{background: #09bb07;}
+.orangebg{background: #ff9d2b;}
+
+.my-code{ color: #fff; position: relative; padding: 100rpx; overflow: hidden;}
+.my-code::after{background-image: repeating-linear-gradient(45deg,rgba(0,0,0,0),rgba(0,0,0,0) 1.5%,rgba(255,255,255,0.1) 0,rgba(255,255,255,0.1) 3.5%); position: absolute; left: 0; bottom: 0; width:200%; height:10%; display: block; content: "";-webkit-animation: mc linear 6s infinite;animation: mc linear 6s infinite; -webkit-transform: translateX(-50%);transform: translateX(-50%);}
+.my-i{ display: inline-block; margin: 0 20rpx; }
+
+@-webkit-keyframes mc{
+    0%{ -webkit-transform: translateX(-50%);}
+    100%{ -webkit-transform: translateX(0);}
+}
+@keyframes mc{
+    0%{ transform: translateX(-50%);}
+    100%{ transform: translateX(0);}
+}
+.adress{padding:20rpx;padding-left:30rpx;background: #fff;}
+.line{width: 100%;background: linear-gradient(#fff,#fff) padding-box,repeating-linear-gradient(-45deg,#fb8b8b 0,#fb8b8b 12.5%,transparent 0,transparent 25%,#88c3ec 0,#88c3ec 37.5%,transparent 0,transparent 50%) 0 / 160rpx 160rpx;border-top: 6rpx solid transparent;}
+.od-tit{ background: #eee; padding: 30rpx 20rpx 10rpx;}
+.ord-info{ padding: 20rpx 20px 0 50rpx; background: #fff;}
+.od-a-img{ width:80rpx; height: 80rpx; border-radius: 50%;}
+.od-a{ line-height: 80rpx;}
+.fan-r{ width:150rpx; display: -webkit-box; -webkit-box-align: center; -webkit-box-pack:end; text-align: right;}
+.od-fan{ line-height:56rpx; font-size:30rpx; padding: 20rpx 0;}
+
+.od-f{ height:92rpx;}
+.od-f-btn{ position: fixed; left: 0; right: 0; bottom: 0; border-radius: 0;}
+.od-f-btn::after{ display: none;}
+
+.guige{ line-height: 100%;}
+
+.cai_for{
+  background: white;
+}
+
+.cai_name{
+  display: flex;
+  justify-content: space-between;
+  padding: 10rpx;
+  border-bottom: 4rpx solid ghostwhite;
+}
+
+.left{
+  flex: 1;
+  height: 90rpx;
+  line-height: 90rpx;
+}
+.left image{
+  width: 100rpx;
+  height: 90rpx; 
+}
+.right{
+  flex: 1;
+  height: 90rpx;
+  line-height: 90rpx;
+  margin-top: 10rpx;
+  margin-bottom:10rpx;
+}
+
+.pingjia{
+  width: 100%;
+  height: 50rpx;
+  margin-top: 10rpx;
+  margin-bottom: 10rpx;
+  /*display: flex;
+  justify-content: flex-end;*/
+}
+
+.pingjia .ping{
+  width: 200rpx;
+  height: 40rpx;
+  line-height: 40rpx;
+  border: 1rpx solid #009AFF;
+  font-size: 32rpx;
+  text-align: center; 
+  float: right;
+}
+
+.pingjia .ping:active{
+  background: #09bb07;
+  border: 1rpx solid #09bb07;
+  color: lavender;
+}
+
+.del_pingjia{
+  width: 100%;
+  height: 50rpx;
+  background: white;
+  line-height: 50rpx;
+}
+
+.del_btn{
+  display: inline-block;
+  width: 200rpx;
+  height: 40rpx;
+  line-height: 40rpx;
+  text-align: center;
+  border: 1rpx solid gray;
+  font-size: 32rpx;
+  color: white; 
+  float: right;
+}
+.del_btn:active{
+  background: green;
+  color: white;
+}
+
+
+
+ .del_btn_one{
+  border: 1rpx  solid red;
+  width: 200rpx;
+  height: 40rpx;
+  line-height: 40rpx;
+  text-align: center;
+  font-size: 32rpx; 
+  color: red;
+}
+
+.del_btn_one:active{
+  background: red;
+  color: white;
+}
+
+.del_bottom{
+  display: flex;
+  justify-content: space-between;
+  background: white;
+  height: 160rpx;
+  
+}
+.del_left {
+  flex: 3;
+  font-size: 30rpx;
+  margin-top: 30rpx;
+}
+.font_color{
+  font-size: 38rpx;
+  color: #009AFF;
+}
+
+.del_ping{
+  flex: 2;
+}
+
+@import "/css/DuoguanDish/DuoguanDish-template-default.wxss";
